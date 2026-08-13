@@ -903,10 +903,6 @@ h1 em,
   padding: 30px;
 }
 
-.capability-grid article:nth-child(n + 4) {
-  background: rgba(72, 218, 208, .035);
-}
-
 .capability-topline {
   align-items: start;
   display: flex;
@@ -933,11 +929,6 @@ h1 em,
   text-transform: uppercase;
 }
 
-.capability-grid article:nth-child(n + 4) .capability-topline span,
-.capability-grid article:nth-child(n + 4) .capability-topline strong {
-  color: var(--here-mint);
-}
-
 .capability-grid h3 {
   font-size: clamp(24px, 2.25vw, 32px);
   letter-spacing: -.035em;
@@ -961,10 +952,6 @@ h1 em,
   margin-top: auto;
   padding-top: 16px;
   text-transform: uppercase;
-}
-
-.capability-grid article:nth-child(n + 4) .capability-result {
-  color: var(--here-mint);
 }
 
 .projects-section {
