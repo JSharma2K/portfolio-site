@@ -580,11 +580,72 @@ h1 em,
   text-transform: uppercase;
 }
 
+.ownership-details {
+  border-bottom: 1px solid rgba(7, 10, 16, .24);
+  border-top: 1px solid rgba(7, 10, 16, .24);
+  margin-top: 38px;
+}
+
+.ownership-details summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-mono), monospace;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: space-between;
+  letter-spacing: .06em;
+  list-style: none;
+  padding: 25px 0;
+  text-transform: uppercase;
+}
+
+.ownership-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.ownership-plus {
+  color: var(--blue);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: .7;
+  transition: transform 180ms ease;
+}
+
+.ownership-details[open] .ownership-plus {
+  transform: rotate(45deg);
+}
+
+.ownership-details ul,
+.ownership-panel ul {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 4px 0 34px 22px;
+}
+
+.ownership-details li,
+.ownership-panel li {
+  color: rgba(7, 10, 16, .79);
+  font-size: 15px;
+  line-height: 1.65;
+  padding-left: 6px;
+}
+
+.ownership-details li strong,
+.ownership-panel li strong {
+  color: var(--ink);
+}
+
+.msci-ownership li::marker {
+  color: var(--blue);
+  font-size: 1.15em;
+}
+
 .ownership-panel {
-  background: rgba(47, 107, 255, .055);
-  border: 1px solid rgba(47, 107, 255, .18);
-  border-radius: 20px;
-  padding: 30px clamp(22px, 3vw, 40px) 34px;
+  border-top: 1px solid rgba(9, 39, 50, .28);
+  padding-top: 30px;
 }
 
 .ownership-panel h4 {
@@ -595,64 +656,68 @@ h1 em,
   text-transform: uppercase;
 }
 
-.ownership-panel ul {
-  display: grid;
-  gap: 16px;
-  margin: 0;
-  padding-left: 22px;
-}
-
-.ownership-panel li {
-  color: rgba(7, 10, 16, .79);
-  font-size: 15px;
-  line-height: 1.65;
-  padding-left: 4px;
-}
-
-.msci-ownership li::marker {
-  color: var(--blue);
-}
-
-.ownership-panel li strong {
-  color: var(--ink);
+.here-zone {
+  background-color: #b8bdbb;
+  background-image:
+    radial-gradient(circle, rgba(255, 255, 255, .22) 0 .7px, transparent .9px),
+    radial-gradient(circle, rgba(9, 39, 50, .13) 0 .55px, transparent .8px),
+    linear-gradient(135deg, rgba(255,255,255,.14), rgba(9,39,50,.04));
+  background-position: 0 0, 2px 3px, 0 0;
+  background-size: 5px 5px, 7px 7px, auto;
+  color: var(--here-ink);
+  padding-bottom: clamp(100px, 12vw, 175px);
+  padding-top: clamp(95px, 11vw, 165px);
 }
 
 .here-experience {
-  background: linear-gradient(135deg, rgba(30, 243, 228, .13), rgba(232, 251, 248, .72));
-  border: 1px solid rgba(9, 39, 50, .16);
-  border-radius: 24px;
-  margin: 30px 0 72px;
-  padding: 52px clamp(28px, 4vw, 54px) 60px;
+  border-top: 2px solid var(--here-ink);
+  padding-bottom: clamp(76px, 8vw, 120px);
+  padding-top: 54px;
 }
 
-.here-experience .experience-kicker,
-.here-experience .delivery-strip strong {
-  color: #087e77;
+.here-zone .experience-meta span {
+  color: rgba(9, 39, 50, .72);
+}
+
+.here-zone .experience-body > p:not(.experience-kicker) {
+  color: rgba(9, 39, 50, .86);
+}
+
+.here-zone .experience-kicker,
+.here-zone .delivery-strip strong,
+.here-zone .ownership-panel h4,
+.here-zone .earlier-roles > article > span {
+  color: #006f69;
 }
 
 .here-strip {
-  border-color: rgba(9, 39, 50, .18);
+  border-color: rgba(9, 39, 50, .3);
 }
 
 .here-strip div + div {
-  border-color: rgba(9, 39, 50, .18);
+  border-color: rgba(9, 39, 50, .3);
 }
 
 .here-ownership {
-  background: rgba(255, 255, 255, .52);
-  border-color: rgba(9, 39, 50, .16);
+  border-color: rgba(9, 39, 50, .3);
 }
 
 .here-ownership li::marker {
-  color: #08a89f;
+  color: #008e86;
+  font-size: 1.15em;
+}
+
+.here-zone .ownership-panel li,
+.here-zone .ownership-panel li strong {
+  color: var(--here-ink);
 }
 
 .earlier-roles {
-  border-top: 1px solid rgba(7, 10, 16, 0.2);
+  border-top: 1px solid rgba(9, 39, 50, .32);
 }
 
 .earlier-roles article {
-  border-bottom: 1px solid rgba(7, 10, 16, 0.2);
+  border-bottom: 1px solid rgba(9, 39, 50, .32);
   display: grid;
   gap: 28px;
   grid-template-columns: minmax(100px, .34fr) minmax(0, 1fr);
@@ -660,7 +725,7 @@ h1 em,
 }
 
 .earlier-roles > article > span {
-  color: var(--blue);
+  color: #006f69;
   font-family: var(--font-mono), monospace;
   font-size: 11px;
 }
@@ -671,7 +736,7 @@ h1 em,
 }
 
 .earlier-roles p {
-  color: rgba(7, 10, 16, 0.62);
+  color: rgba(9, 39, 50, .78);
   margin: 0;
 }
 
@@ -983,7 +1048,7 @@ footer {
   .delivery-strip { grid-template-columns: 1fr; }
   .delivery-strip div + div { border-left: 0; border-top: 1px solid rgba(7,10,16,.15); padding-left: 0; }
   .here-strip div + div { border-color: rgba(9,39,50,.18); }
-  .here-experience { margin-left: -12px; margin-right: -12px; padding-left: 24px; padding-right: 24px; }
+  .here-experience { padding-left: 0; padding-right: 0; }
   .journey-grid,
   .capability-grid,
   .project-grid { grid-template-columns: 1fr; }

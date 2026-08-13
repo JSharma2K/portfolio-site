@@ -268,8 +268,11 @@ export default function Home() {
               <div><strong>Scale</strong><span>Agents, context, tools and Vertex AI</span></div>
             </div>
 
-            <div className="ownership-panel msci-ownership">
-              <h4>What changed under my ownership</h4>
+            <details className="ownership-details msci-ownership">
+              <summary>
+                <span>What changed under my ownership</span>
+                <span className="ownership-plus" aria-hidden="true">+</span>
+              </summary>
               <ul>
                 <li><strong>Retrieval became semantic.</strong> Extended BM25 page ranking with BERT-based semantic detection and reranking. This increased relevant-page coverage and improved the evidence presented to downstream extraction.</li>
                 <li><strong>Prompts became methodology aware.</strong> Applied few-shot patterns and structured instructions, then designed a prompt-builder agent that interpreted methodology documents and assembled task-specific extraction prompts.</li>
@@ -280,10 +283,12 @@ export default function Home() {
                 <li><strong>Delivery became conversational.</strong> Extended the system into an AG-UI experience where users could upload documents, explain the requested data and guide extraction while the same evaluation and human-review controls remained in place.</li>
                 <li><strong>Evaluation moved beyond the model.</strong> Deployed workflows on GCP and Vertex AI, then assessed grounding, tool execution, handoffs and end-to-end completion across the full agent system.</li>
               </ul>
-            </div>
+            </details>
           </div>
         </article>
+      </section>
 
+      <section className="section here-zone" aria-label="HERE Technologies experience">
         <article className="experience-card here-experience">
           <div className="experience-meta">
             <div className="company-heading">
