@@ -51,34 +51,46 @@ const systemsJourney = [
 
 const capabilities = [
   {
-    title: "Agentic AI, text and NLP systems",
     index: "A",
-    copy: "I design the full path from a user question or methodology to retrieval, reasoning, tool execution, structured output and human review. The result is a working product, not an isolated model call.",
+    company: "MSCI / Production",
+    title: "Petabyte-scale document extraction",
+    copy: "Delivered production document extraction across company annual reports, disclosures and large PDF corpora. Designed the complete path from evidence discovery and data preparation to traceable structured outputs for commercial datasets.",
+    result: "Annual reports / regulated PDFs / structured data",
   },
   {
-    title: "Retrieval and document intelligence",
     index: "B",
-    copy: "BM25 and semantic page detection narrow large documents to the right evidence. Prompt construction, extraction and post-processing then convert that evidence into traceable data and insight.",
+    company: "MSCI / Production",
+    title: "Agentic RAG extraction architecture",
+    copy: "Designed a retrieval and RAG-based agentic AI application for document extraction. BM25 and BERT located the evidence, while prompt-builder, extraction, cleansing and validation agents converted it into grounded data points.",
+    result: "Retrieval / prompt building / extraction / validation",
   },
   {
-    title: "Quality engineering and evaluation",
     index: "C",
-    copy: "Ground-truth datasets, precision and recall, hallucination checks, failure taxonomies and regression tests make model and agent behavior measurable before it reaches users.",
+    company: "MSCI / Production",
+    title: "KPI and agent-system evaluations",
+    copy: "Built assessment scripts that calculated accuracy, precision and recall at the data-point level. Extended evaluation to grounding, hallucination detection, tool-call success, agent handoffs, task completion and regression across model and prompt changes.",
+    result: "Precision / recall / grounding / tool success / regression",
   },
   {
-    title: "Graph and geospatial systems",
     index: "D",
-    copy: "Graph neural networks, spatial features, clustering and conflation logic connect imperfect map sources. Evaluation pipelines turn those models into dependable location products.",
+    company: "HERE / In production",
+    title: "Multi-source map conflation",
+    copy: "Put association and clustering logic into production to identify equivalent road features and merge attributes across heterogeneous map sources. A stateful self-healing pipeline kept conflated features current as fresher data streamed in.",
+    result: "Feature matching / attribute merging / streaming freshness",
   },
   {
-    title: "Classical ML, deep learning and vision",
     index: "E",
-    copy: "Tree models, linear methods, LSTMs and CNNs provide the right level of complexity for each problem. Feature engineering and controlled comparison keep architecture choices evidence based.",
+    company: "HERE / In production",
+    title: "Urban Cruise Control feature intelligence",
+    copy: "Built the evaluation and ML quality layer for BMW Urban Cruise Control map features. The system surfaced false positives and negatives, guided production POCs and contributed to an approximately five percent improvement across measured KPIs.",
+    result: "Production POCs / false-positive control / ~5% KPI lift",
   },
   {
-    title: "Cloud and production delivery",
     index: "F",
-    copy: "Python services, GCP, Vertex AI, APIs, data pipelines and CI/CD connect models to secure workflows. Monitoring and evaluation remain part of the product after deployment.",
+    company: "HERE / Production ML",
+    title: "Lane-marking classification",
+    copy: "Developed and tuned a LightGBM model for lane-marking style and color. Feature engineering and SHAP-based selection concentrated the model on high-value signals and achieved approximately 74 percent F1.",
+    result: "LightGBM / SHAP / feature engineering / ~74% F1",
   },
 ];
 
@@ -358,7 +370,7 @@ export default function Home() {
         <div className="journey-grid">
           {systemsJourney.map((item) => (
             <article className="journey-card" key={item.step}>
-              <div className="journey-topline"><span>{item.step}</span><span>{item.era}</span></div>
+              <div className="journey-topline"><span>{item.step}</span><strong>{item.era}</strong></div>
               <h3>{item.title}</h3>
               <p>{item.copy}</p>
               <div className="tag-row">
@@ -376,24 +388,18 @@ export default function Home() {
       <section className="section capability-section">
         <div className="section-heading">
           <p className="section-number">03 / Product delivery</p>
-          <h2>Technical depth that comes together in working systems.</h2>
-          <p>Models create value when they are connected to evidence, services, evaluation, interfaces and operational feedback.</p>
+          <h2>Technical depth that comes together in working production systems.</h2>
+          <p>The main result is not a list of technologies. It is the set of AI and ML systems shipped into real workflows across MSCI and HERE Technologies.</p>
         </div>
         <div className="capability-grid">
           {capabilities.map((item) => (
             <article key={item.index}>
-              <span>{item.index}</span>
+              <div className="capability-topline"><span>{item.index}</span><strong>{item.company}</strong></div>
               <h3>{item.title}</h3>
               <p>{item.copy}</p>
+              <div className="capability-result">{item.result}</div>
             </article>
           ))}
-        </div>
-        <div className="stack-line" aria-label="Technology stack">
-          <span>Python</span><span>Scikit-learn</span><span>LightGBM</span><span>PyTorch</span>
-          <span>PyTorch Geometric</span><span>GraphSAGE</span><span>CNN</span><span>LSTM</span>
-          <span>BM25</span><span>BERT</span><span>LangGraph</span><span>LangChain</span>
-          <span>CrewAI</span><span>RAG</span><span>GCP</span><span>Vertex AI</span>
-          <span>SQL</span><span>GeoPandas</span><span>NetworkX</span><span>SHAP</span>
         </div>
       </section>
 
