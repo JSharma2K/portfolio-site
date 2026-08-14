@@ -487,12 +487,12 @@ h1 em,
 }
 
 .company-logo.here-logo {
-  background: white;
+  background: transparent;
   border: 0;
   border-radius: 0;
   height: 100px;
-  padding: 9px;
-  width: 106px;
+  padding: 0;
+  width: 109px;
 }
 
 .company-heading .company-logo.msci-logo img {
@@ -502,8 +502,9 @@ h1 em,
 }
 
 .company-heading .company-logo.here-logo img {
-  height: 80px;
-  width: auto;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
 }
 
 .here-experience .company-heading {

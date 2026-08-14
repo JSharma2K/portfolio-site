@@ -150,12 +150,19 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
-function CompanyLogo({ company }: { company: "msci" | "here" }) {
+function CompanyLogo({
+  company,
+  variant = "default",
+}: {
+  company: "msci" | "here";
+  variant?: "default" | "press";
+}) {
   const isMsci = company === "msci";
+  const isPressHere = !isMsci && variant === "press";
   return (
     <span className={`company-logo ${isMsci ? "msci-logo" : "here-logo"}`}>
       <img
-        src={isMsci ? "/msci-logo.svg" : "/here-logo-reference.svg"}
+        src={isMsci ? "/msci-logo.svg" : isPressHere ? "/here-logo-press.jpg" : "/here-logo-reference.svg"}
         alt={isMsci ? "MSCI" : "HERE Technologies"}
       />
     </span>
@@ -321,7 +328,7 @@ export default function Home() {
         <article className="experience-card here-experience">
           <div className="experience-meta">
             <div className="company-heading">
-              <CompanyLogo company="here" />
+              <CompanyLogo company="here" variant="press" />
               <p>HERE Technologies</p>
             </div>
             <p className="experience-role-line">2022 to March 2024 / Junior Data Scientist</p>
