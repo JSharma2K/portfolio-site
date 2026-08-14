@@ -490,10 +490,9 @@ h1 em,
   background: transparent;
   border: 0;
   border-radius: 0;
-  height: 142px;
+  height: 155px;
   padding: 0;
-  position: relative;
-  width: 190px;
+  width: 170px;
 }
 
 .company-heading .company-logo.msci-logo img {
@@ -504,12 +503,7 @@ h1 em,
 
 .company-heading .company-logo.here-logo img {
   height: auto;
-  left: -15px;
-  max-height: none;
-  max-width: none;
-  position: absolute;
-  top: -30px;
-  width: 220px;
+  width: 170px;
 }
 
 .here-experience .company-heading {
@@ -521,7 +515,8 @@ h1 em,
 
 .here-experience .company-heading p {
   color: var(--here-mint);
-  font-size: 18px;
+  font-size: clamp(23px, 2.2vw, 29px);
+  font-weight: 800;
   letter-spacing: -.02em;
   text-align: center;
   width: 100%;
@@ -563,7 +558,7 @@ h1 em,
 }
 
 .here-experience .experience-role-line {
-  color: white;
+  color: var(--here-mint);
 }
 
 .experience-body h3 {
