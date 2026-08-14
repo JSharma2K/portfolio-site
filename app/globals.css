@@ -542,19 +542,22 @@ h1 em,
 }
 
 .metric-sticker {
-  background: var(--blue);
-  border-radius: 3px;
-  box-shadow: 3px 3px 0 rgba(7, 10, 16, .16);
   color: white;
   display: inline-block;
   font-weight: 800;
+  isolation: isolate;
   line-height: 1.25;
-  padding: 2px 7px 3px;
-  transform: rotate(-1deg);
+  padding: 2px 8px 3px;
+  position: relative;
 }
 
-.metric-sticker:nth-of-type(even) {
-  transform: rotate(1deg);
+.metric-sticker::before {
+  background: linear-gradient(90deg, #2f6bff, #3f76ff 52%, #2f6bff);
+  clip-path: polygon(0 16%, 4% 5%, 100% 0, 97% 20%, 100% 82%, 95% 96%, 0 100%, 3% 76%);
+  content: "";
+  inset: 0 -3px;
+  position: absolute;
+  z-index: -1;
 }
 
 .delivery-strip {
