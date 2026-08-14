@@ -541,6 +541,22 @@ h1 em,
   max-width: 900px;
 }
 
+.metric-sticker {
+  background: var(--blue);
+  border-radius: 3px;
+  box-shadow: 3px 3px 0 rgba(7, 10, 16, .16);
+  color: white;
+  display: inline-block;
+  font-weight: 800;
+  line-height: 1.25;
+  padding: 2px 7px 3px;
+  transform: rotate(-1deg);
+}
+
+.metric-sticker:nth-of-type(even) {
+  transform: rotate(1deg);
+}
+
 .delivery-strip {
   border-bottom: 1px solid rgba(7, 10, 16, 0.15);
   border-top: 1px solid rgba(7, 10, 16, 0.15);
@@ -639,6 +655,52 @@ h1 em,
 .msci-ownership li::marker {
   color: var(--blue);
   font-size: 1.15em;
+}
+
+.msci-ownership {
+  grid-column: 1 / -1;
+  margin-top: 24px;
+}
+
+.msci-ownership summary {
+  font-family: var(--font-sans), sans-serif;
+  font-size: clamp(21px, 2.35vw, 34px);
+  font-weight: 750;
+  justify-content: center;
+  letter-spacing: -.035em;
+  min-height: 96px;
+  padding: 30px 72px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+}
+
+.msci-ownership .ownership-plus {
+  position: absolute;
+  right: 14px;
+}
+
+.msci-ownership ul {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1040px;
+  padding: 18px 0 46px;
+}
+
+.msci-ownership li {
+  padding-left: 36px;
+  position: relative;
+}
+
+.msci-ownership li::before {
+  color: var(--blue);
+  content: "—";
+  font-size: 18px;
+  font-weight: 800;
+  left: 0;
+  line-height: 1.35;
+  position: absolute;
+  top: 1px;
 }
 
 .ownership-panel {

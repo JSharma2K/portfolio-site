@@ -285,8 +285,9 @@ export default function Home() {
               The platform evolved as model capabilities changed. I helped move it from a
               single extraction flow into a set of specialized agents that could interpret
               methodologies, use tools, preserve context, challenge unsupported results and
-              involve people where domain judgment mattered. Target workflows reached more
-              than 85 to 90 percent recall and exceeded 80 percent precision against agreed
+              involve people where domain judgment mattered. Target workflows reached{" "}
+              <span className="metric-sticker">&gt;90% recall</span> and{" "}
+              <span className="metric-sticker">&gt;80% precision</span> against agreed
               ground-truth benchmarks.
             </p>
 
@@ -296,23 +297,24 @@ export default function Home() {
               <div><strong>Scale</strong><span>Agents, context, tools and Vertex AI</span></div>
             </div>
 
-            <details className="ownership-details msci-ownership">
-              <summary>
-                <span>What changed under my ownership</span>
-                <span className="ownership-plus" aria-hidden="true">+</span>
-              </summary>
-              <ul>
-                <li><strong>Retrieval became semantic.</strong> Extended BM25 page ranking with BERT-based semantic detection and reranking. This increased relevant-page coverage and improved the evidence presented to downstream extraction.</li>
-                <li><strong>Prompts became methodology aware.</strong> Applied few-shot patterns and structured instructions, then designed a prompt-builder agent that interpreted methodology documents and assembled task-specific extraction prompts.</li>
-                <li><strong>Extraction became controlled.</strong> Added preprocessing, schema-aware post-processing, data cleansing, validation, evidence checks and explicit hallucination controls before outputs could move forward.</li>
-                <li><strong>Quality became measurable.</strong> Built a ground-truth assessment pipeline that calculated precision and recall at the data-point level, compared prompt and model variants, exposed failure modes and supported regression testing.</li>
-                <li><strong>The workflow became agentic.</strong> Re-architected extraction with CrewAI agents for prompt building, document extraction, cleansing and validation. Agents used defined tools and skills instead of relying on one oversized prompt.</li>
-                <li><strong>Orchestration became task aware.</strong> Designed sequential and hierarchical flows, agent-to-agent communication, context services and memory patterns that preserved methodology, evidence and intermediate decisions.</li>
-                <li><strong>Delivery became conversational.</strong> Extended the system into an AG-UI experience where users could upload documents, explain the requested data and guide extraction while the same evaluation and human-review controls remained in place.</li>
-                <li><strong>Evaluation moved beyond the model.</strong> Deployed workflows on GCP and Vertex AI, then assessed grounding, tool execution, handoffs and end-to-end completion across the full agent system.</li>
-              </ul>
-            </details>
           </div>
+
+          <details className="ownership-details msci-ownership">
+            <summary>
+              <span>What changed under my ownership</span>
+              <span className="ownership-plus" aria-hidden="true">+</span>
+            </summary>
+            <ul>
+              <li><strong>Retrieval became semantic.</strong> Extended BM25 page ranking with BERT-based semantic detection and reranking. This increased relevant-page coverage and improved the evidence presented to downstream extraction.</li>
+              <li><strong>Prompts became methodology aware.</strong> Applied few-shot patterns and structured instructions, then designed a prompt-builder agent that interpreted methodology documents and assembled task-specific extraction prompts.</li>
+              <li><strong>Extraction became controlled.</strong> Added preprocessing, schema-aware post-processing, data cleansing, validation, evidence checks and explicit hallucination controls before outputs could move forward.</li>
+              <li><strong>Quality became measurable.</strong> Built a ground-truth assessment pipeline that calculated precision and recall at the data-point level, compared prompt and model variants, exposed failure modes and supported regression testing.</li>
+              <li><strong>The workflow became agentic.</strong> Re-architected extraction with CrewAI agents for prompt building, document extraction, cleansing and validation. Agents used defined tools and skills instead of relying on one oversized prompt.</li>
+              <li><strong>Orchestration became task aware.</strong> Designed sequential and hierarchical flows, agent-to-agent communication, context services and memory patterns that preserved methodology, evidence and intermediate decisions.</li>
+              <li><strong>Delivery became conversational.</strong> Extended the system into an AG-UI experience where users could upload documents, explain the requested data and guide extraction while the same evaluation and human-review controls remained in place.</li>
+              <li><strong>Evaluation moved beyond the model.</strong> Deployed workflows on GCP and Vertex AI, then assessed grounding, tool execution, handoffs and end-to-end completion across the full agent system.</li>
+            </ul>
+          </details>
         </article>
       </section>
 
