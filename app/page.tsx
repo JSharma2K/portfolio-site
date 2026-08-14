@@ -375,6 +375,14 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="narrative-bridge" aria-label="Transition from delivery to design thinking">
+        <p className="narrative-bridge-label">[ delivery <span>→</span> design thinking ]</p>
+        <div className="narrative-bridge-copy">
+          <strong>What I shipped shows the outcomes.</strong>
+          <p>What follows explains the architectures, evaluation methods and technical foundations behind them.</p>
+        </div>
+      </section>
+
       <section className="section systems-section" id="systems">
         <div className="section-heading split-heading">
           <div>
