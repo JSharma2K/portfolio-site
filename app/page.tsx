@@ -299,7 +299,7 @@ export default function Home() {
 
           </div>
 
-          <details className="ownership-details msci-ownership">
+          <details className="ownership-details msci-ownership" open>
             <summary>
               <span>What changed under my ownership</span>
               <span className="ownership-plus" aria-hidden="true">+</span>
@@ -309,6 +309,7 @@ export default function Home() {
               <li><strong>Prompts became methodology aware.</strong> Applied few-shot patterns and structured instructions, then designed a prompt-builder agent that interpreted methodology documents and assembled task-specific extraction prompts.</li>
               <li><strong>Extraction became controlled.</strong> Added preprocessing, schema-aware post-processing, data cleansing, validation, evidence checks and explicit hallucination controls before outputs could move forward.</li>
               <li><strong>Quality became measurable.</strong> Built a ground-truth assessment pipeline that calculated precision and recall at the data-point level, compared prompt and model variants, exposed failure modes and supported regression testing.</li>
+              <li><strong>Dataset performance improved materially.</strong> Single-handedly advanced multiple extraction datasets from below 50% precision and recall to &gt;90% recall and &gt;80% precision through focused retrieval, prompting, validation and evaluation improvements.</li>
               <li><strong>The workflow became agentic.</strong> Re-architected extraction with CrewAI agents for prompt building, document extraction, cleansing and validation. Agents used defined tools and skills instead of relying on one oversized prompt.</li>
               <li><strong>Orchestration became task aware.</strong> Designed sequential and hierarchical flows, agent-to-agent communication, context services and memory patterns that preserved methodology, evidence and intermediate decisions.</li>
               <li><strong>Delivery became conversational.</strong> Extended the system into an AG-UI experience where users could upload documents, explain the requested data and guide extraction while the same evaluation and human-review controls remained in place.</li>
