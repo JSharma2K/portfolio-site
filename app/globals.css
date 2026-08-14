@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@xyflow/react/dist/style.css" layer(base);
 
 :root {
   --ink: #070a10;
@@ -105,17 +106,6 @@ nav a:focus-visible {
   color: var(--paper);
 }
 
-.nav-cta {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  color: var(--paper);
-  padding: 9px 14px;
-}
-
-.nav-cta span {
-  color: var(--lime);
-}
-
 .hero {
   align-items: center;
   display: grid;
@@ -192,20 +182,20 @@ h1 em,
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: clamp(28px, 4vw, 48px);
 }
 
 .button {
   align-items: center;
-  border-radius: 999px;
   display: inline-flex;
   font-family: var(--font-mono), monospace;
-  font-size: 11px;
-  gap: 18px;
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 700;
+  gap: 14px;
   justify-content: center;
-  padding: 14px 20px;
+  padding: 4px 0;
   text-transform: uppercase;
-  transition: transform 180ms ease, background 180ms ease;
+  transition: color 180ms ease, transform 180ms ease;
 }
 
 .button:hover,
@@ -214,17 +204,21 @@ h1 em,
 }
 
 .button-primary {
-  background: var(--blue);
+  color: var(--blue);
 }
 
 .button-primary:hover,
 .button-primary:focus-visible {
-  background: #4e81ff;
+  color: var(--blue-soft);
 }
 
 .button-secondary {
-  border: 1px solid var(--line);
-  color: var(--paper-muted);
+  color: var(--paper);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  color: var(--lime);
 }
 
 .career-map {
@@ -250,109 +244,108 @@ h1 em,
   text-transform: uppercase;
 }
 
-.career-track {
-  padding: 12px 22px 20px;
-  position: relative;
+.career-flow {
+  height: 534px;
+  width: 100%;
 }
 
-.career-track::before {
-  background: linear-gradient(to bottom, var(--blue), var(--here-mint), var(--lime));
-  bottom: 44px;
-  content: "";
-  left: 46px;
-  opacity: .55;
-  position: absolute;
-  top: 44px;
-  width: 1px;
+.career-flow .react-flow__pane {
+  cursor: default;
 }
 
-.career-stage {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: 50px minmax(0, 1fr);
-  padding: 18px 0;
-  position: relative;
+.career-flow .react-flow__node {
+  width: 446px;
 }
 
-.career-node {
+.career-flow .react-flow__edge-path {
+  stroke-linecap: round;
+}
+
+.career-flow-node {
+  --node-accent: var(--blue-soft);
   align-items: center;
-  background: var(--ink-soft);
-  border: 1px solid rgba(154, 182, 255, 0.6);
-  border-radius: 50%;
+  background: rgba(8, 13, 22, 0.96);
+  border: 1px solid rgba(243, 241, 233, 0.16);
+  border-left: 3px solid var(--node-accent);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 74px minmax(0, 1fr);
+  min-height: 108px;
+  padding: 13px 16px;
+  width: 446px;
+}
+
+.career-flow-foundation {
+  --node-accent: var(--blue-soft);
+}
+
+.career-flow-here {
+  --node-accent: var(--here-mint);
+}
+
+.career-flow-msci {
+  --node-accent: var(--blue);
+}
+
+.career-flow-future {
+  --node-accent: var(--lime);
+}
+
+.career-flow-brand {
+  align-items: center;
+  color: var(--node-accent);
   display: flex;
   font-family: var(--font-mono), monospace;
-  font-size: 9px;
-  height: 48px;
+  font-size: 16px;
+  font-weight: 700;
   justify-content: center;
-  position: absolute;
-  width: 48px;
-  z-index: 2;
+  min-height: 48px;
 }
 
-.career-stage > div {
-  grid-column: 2;
+.career-flow-brand img {
+  display: block;
+  height: auto;
+  max-height: 46px;
+  max-width: 70px;
 }
 
-.career-date {
-  color: var(--blue-soft);
+.career-flow-here .career-flow-brand img {
+  max-height: 56px;
+  max-width: 64px;
+}
+
+.career-flow-msci .career-flow-brand img {
+  filter: brightness(0) invert(1);
+}
+
+.career-flow-date {
+  color: var(--node-accent);
   display: block;
   font-family: var(--font-mono), monospace;
   font-size: 8px;
-  letter-spacing: .05em;
+  letter-spacing: .06em;
   margin-bottom: 3px;
   text-transform: uppercase;
 }
 
-.career-stage strong {
+.career-flow-copy strong {
   display: block;
   font-size: 15px;
   letter-spacing: -.02em;
-  line-height: 1.35;
+  line-height: 1.3;
 }
 
-.career-stage p {
+.career-flow-copy p {
   color: #d8d8d1;
-  font-size: 11px;
-  line-height: 1.55;
-  margin: 6px 0 0;
+  font-size: 10.5px;
+  line-height: 1.5;
+  margin: 5px 0 0;
 }
 
-.logo-node {
-  background: var(--paper);
-  border-color: var(--here-mint);
-}
-
-.msci-node {
-  background: #0626a9;
-  border-color: #7692dd;
-}
-
-.career-node .company-logo {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  height: auto;
-  padding: 0;
-  width: 30px;
-}
-
-.career-node .here-logo img {
-  height: 26px;
-  width: auto;
-}
-
-.career-node .msci-logo img {
-  height: auto;
-  width: 33px;
-}
-
-.career-future .career-node {
-  border-color: var(--lime);
-  color: var(--lime);
-}
-
-.career-future .career-date {
-  color: var(--lime);
+.career-flow-handle {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .ticker {
@@ -441,7 +434,7 @@ h1 em,
   border-top: 1px solid rgba(7, 10, 16, 0.2);
   display: grid;
   gap: 36px;
-  grid-template-columns: minmax(180px, .34fr) minmax(0, 1fr);
+  grid-template-columns: minmax(270px, .36fr) minmax(0, 1fr);
   padding: 52px 0 72px;
 }
 
@@ -510,7 +503,7 @@ h1 em,
   align-items: center;
   flex-direction: column;
   gap: 8px;
-  width: 190px;
+  width: 270px;
 }
 
 .here-experience .company-heading p {
@@ -519,27 +512,8 @@ h1 em,
   font-weight: 800;
   letter-spacing: -.02em;
   text-align: center;
+  white-space: nowrap;
   width: 100%;
-}
-
-.career-node .company-logo.msci-logo,
-.career-node .company-logo.here-logo {
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  height: auto;
-  padding: 0;
-  width: auto;
-}
-
-.career-node .company-logo.msci-logo img {
-  height: auto;
-  width: 33px;
-}
-
-.career-node .company-logo.here-logo img {
-  height: 26px;
-  width: auto;
 }
 
 .experience-role-line {
@@ -1200,12 +1174,11 @@ footer {
 @media (max-width: 720px) {
   .site-header { height: 68px; }
   .brand > span:last-child,
-  nav > a:not(.nav-cta) { display: none; }
+  nav > a { display: none; }
   .hero { min-height: auto; padding-top: 74px; }
   h1 { font-size: clamp(48px, 15vw, 74px); }
   .career-map { border-radius: 16px; }
-  .career-track { padding-left: 16px; padding-right: 16px; }
-  .career-track::before { left: 40px; }
+  .career-flow { height: 512px; }
   .section-heading,
   .experience-card,
   .earlier-roles article { grid-template-columns: 1fr; }

@@ -1,3 +1,5 @@
+import CareerFlow from "./CareerFlow";
+
 const marqueeSkills = [
   "Classical machine learning",
   "Deep learning",
@@ -181,9 +183,6 @@ export default function Home() {
           <a href="#work">Work</a>
           <a href="#systems">Systems</a>
           <a href="#projects">Projects</a>
-          <a className="nav-cta" href="mailto:sharmajivitesh2@gmail.com">
-            Let&apos;s talk <Arrow />
-          </a>
         </nav>
       </header>
 
@@ -210,40 +209,7 @@ export default function Home() {
             <span>Career journey</span>
             <span>2018 / Forward</span>
           </div>
-          <div className="career-track">
-            <article className="career-stage">
-              <span className="career-node">01</span>
-              <div>
-                <span className="career-date">2018 to 2021</span>
-                <strong>Foundations in data science</strong>
-                <p>SP Jain, applied AI study and projects across statistics, NLP, vision and deep learning.</p>
-              </div>
-            </article>
-            <article className="career-stage">
-              <span className="career-node logo-node"><CompanyLogo company="here" /></span>
-              <div>
-                <span className="career-date">2021 to 2024</span>
-                <strong>Production ML and graph systems</strong>
-                <p>HERE Technologies, mapping intelligence, geospatial ML, graph learning and resilient pipelines.</p>
-              </div>
-            </article>
-            <article className="career-stage">
-              <span className="career-node logo-node msci-node"><CompanyLogo company="msci" /></span>
-              <div>
-                <span className="career-date">2024 to Present</span>
-                <strong>Generative and agentic AI</strong>
-                <p>MSCI, enterprise document intelligence, evaluation, orchestration and conversational extraction.</p>
-              </div>
-            </article>
-            <article className="career-stage career-future">
-              <span className="career-node">→</span>
-              <div>
-                <span className="career-date">What comes next</span>
-                <strong>Wider AI product and systems ownership</strong>
-                <p>Building reliable AI products across domains, from architecture and evaluation to delivery.</p>
-              </div>
-            </article>
-          </div>
+          <CareerFlow />
         </aside>
       </section>
 
