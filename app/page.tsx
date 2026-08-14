@@ -375,12 +375,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="chapter-marker" aria-labelledby="chapter-marker-title">
-        <p>[ technical foundations ]</p>
-        <h2 id="chapter-marker-title">How I build</h2>
-        <strong>Technical foundations</strong>
-      </section>
-
       <section className="section systems-section" id="systems">
         <div className="section-heading split-heading">
           <div>
