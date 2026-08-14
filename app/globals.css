@@ -137,30 +137,10 @@ nav a:focus-visible {
   position: absolute;
 }
 
-.hero-orbit {
-  border: 1px solid rgba(47, 107, 255, 0.25);
-  border-radius: 50%;
-  pointer-events: none;
-  position: absolute;
-}
-
-.hero-orbit-one {
-  height: 620px;
-  right: -310px;
-  top: -260px;
-  width: 620px;
-}
-
-.hero-orbit-two {
-  height: 420px;
-  right: -210px;
-  top: -160px;
-  width: 420px;
-}
-
 .hero-copy,
 .career-map {
   position: relative;
+  transform: translateY(-54px);
   z-index: 2;
 }
 

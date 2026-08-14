@@ -181,8 +181,6 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-orbit hero-orbit-one" aria-hidden="true" />
-        <div className="hero-orbit hero-orbit-two" aria-hidden="true" />
         <div className="hero-copy">
           <p className="eyebrow">Data scientist / Generative AI / Agentic systems</p>
           <h1>
