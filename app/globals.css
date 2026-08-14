@@ -381,21 +381,37 @@ h1 em,
   font-family: var(--font-mono), monospace;
   font-size: 11px;
   overflow: hidden;
-  padding: 13px 0;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
-.ticker div {
+.ticker-track {
+  animation: ticker-scroll 34s linear infinite;
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.ticker-group {
   align-items: center;
   display: flex;
   gap: 28px;
-  justify-content: center;
-  min-width: max-content;
+  padding: 13px 28px 13px 0;
+}
+
+.ticker-item {
+  align-items: center;
+  display: flex;
+  gap: 28px;
 }
 
 .ticker i {
   font-size: 7px;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 .section {
@@ -1097,7 +1113,6 @@ footer {
   .career-map { border-radius: 16px; }
   .career-track { padding-left: 16px; padding-right: 16px; }
   .career-track::before { left: 40px; }
-  .ticker div { justify-content: flex-start; padding-left: 20px; }
   .section-heading,
   .experience-card,
   .earlier-roles article { grid-template-columns: 1fr; }
@@ -1127,4 +1142,5 @@ footer {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
+  .ticker-track { animation: none; }
 }

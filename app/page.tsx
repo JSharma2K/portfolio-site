@@ -1,3 +1,16 @@
+const marqueeSkills = [
+  "Classical machine learning",
+  "Deep learning",
+  "Computer vision",
+  "Graph NN",
+  "NLP",
+  "Generative AI",
+  "LLMs",
+  "Agentic AI",
+  "Cloud production systems",
+  "Production delivery",
+];
+
 const systemsJourney = [
   {
     step: "01",
@@ -230,11 +243,16 @@ export default function Home() {
       </section>
 
       <section className="ticker" aria-label="Core technology areas">
-        <div>
-          <span>Classical machine learning</span><i>◆</i><span>Deep learning</span><i>◆</i>
-          <span>Computer vision</span><i>◆</i><span>Graph AI</span><i>◆</i>
-          <span>NLP</span><i>◆</i><span>Generative AI</span><i>◆</i>
-          <span>Production delivery</span>
+        <div className="ticker-track">
+          {[0, 1].map((copy) => (
+            <div className="ticker-group" key={copy} aria-hidden={copy === 1 ? true : undefined}>
+              {marqueeSkills.map((skill) => (
+                <span className="ticker-item" key={`${copy}-${skill}`}>
+                  <span>{skill}</span><i aria-hidden="true">◆</i>
+                </span>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
