@@ -7,8 +7,10 @@ const marqueeSkills = [
   "Graph NN",
   "NLP",
   "Generative AI",
-  "LLMs",
+  "LLM",
   "Agentic AI",
+  "LLM evals",
+  "Context engineering",
   "Harness engineering",
   "Production delivery",
 ];
