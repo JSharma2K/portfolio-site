@@ -159,6 +159,10 @@ nav a:focus-visible {
   text-transform: uppercase;
 }
 
+.section-number {
+  font-size: 15px;
+}
+
 h1,
 h2,
 h3,
@@ -520,10 +524,10 @@ h1 em,
   margin-bottom: 0;
 }
 
-.section-heading > p:last-child,
-.split-heading > p {
+.section-heading > p:last-child {
   color: var(--paper);
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 550;
   line-height: 1.7;
   margin-bottom: 0;
   padding-top: .35rem;
@@ -542,8 +546,6 @@ h1 em,
 
 .experience-section .section-heading > p:last-child {
   color: rgba(7, 10, 16, 0.78);
-  font-size: 16px;
-  font-weight: 550;
 }
 
 .experience-card {
