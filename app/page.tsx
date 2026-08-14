@@ -207,7 +207,7 @@ export default function Home() {
         <aside className="career-map" aria-label="Career journey">
           <div className="career-map-header">
             <span>Career journey</span>
-            <span>2018 / Forward</span>
+            <span>Drag nodes / Click to explore</span>
           </div>
           <CareerFlow />
         </aside>

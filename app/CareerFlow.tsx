@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Controls,
   Handle,
   MarkerType,
   Position,
@@ -8,19 +9,22 @@ import {
   type Edge,
   type Node,
   type NodeProps,
+  useNodesState,
 } from "@xyflow/react";
 import Image from "next/image";
+import { useMemo, useState } from "react";
 
 type JourneyData = {
   date: string;
   title: string;
   copy: string;
+  detail: string;
   brand: "foundation" | "here" | "msci" | "future";
 };
 
 type JourneyNode = Node<JourneyData, "journey">;
 
-const nodes: JourneyNode[] = [
+const initialNodes: JourneyNode[] = [
   {
     id: "foundation",
     type: "journey",
@@ -29,39 +33,43 @@ const nodes: JourneyNode[] = [
       date: "2018 to 2021",
       title: "Foundations in data science",
       copy: "SP Jain, applied AI study and projects across statistics, NLP, vision and deep learning.",
+      detail: "Built the modelling foundation across statistics, classical machine learning, NLP, computer vision and sequence architectures.",
       brand: "foundation",
     },
   },
   {
     id: "here",
     type: "journey",
-    position: { x: 0, y: 128 },
+    position: { x: 70, y: 152 },
     data: {
       date: "2021 to 2024",
       title: "Production ML and graph systems",
       copy: "HERE Technologies, mapping intelligence, geospatial ML, graph learning and resilient pipelines.",
+      detail: "Moved into production geospatial intelligence through GraphSAGE, GNN-based alignment, LightGBM classification and self-healing map pipelines.",
       brand: "here",
     },
   },
   {
     id: "msci",
     type: "journey",
-    position: { x: 0, y: 256 },
+    position: { x: 0, y: 304 },
     data: {
       date: "2024 to Present",
       title: "Generative and agentic AI",
       copy: "MSCI, enterprise document intelligence, evaluation, orchestration and conversational extraction.",
+      detail: "Advanced document extraction from retrieval-ranked LLM calls into evaluated, tool-using agentic workflows deployed on GCP and Vertex AI.",
       brand: "msci",
     },
   },
   {
     id: "future",
     type: "journey",
-    position: { x: 0, y: 384 },
+    position: { x: 70, y: 456 },
     data: {
       date: "What comes next",
       title: "Wider AI product and systems ownership",
       copy: "Building reliable AI products across domains, from architecture and evaluation to delivery.",
+      detail: "The next step is broader ownership of AI products, platforms and teams, connecting technical depth with measurable business outcomes.",
       brand: "future",
     },
   },
@@ -70,9 +78,9 @@ const nodes: JourneyNode[] = [
 const edgeColors = ["#9ab6ff", "#48dad0", "#b8ff5a"];
 
 const edges: Edge[] = ["foundation", "here", "msci"].map((source, index) => ({
-  id: `${source}-to-${nodes[index + 1].id}`,
+  id: `${source}-to-${initialNodes[index + 1].id}`,
   source,
-  target: nodes[index + 1].id,
+  target: initialNodes[index + 1].id,
   type: "smoothstep",
   style: { stroke: edgeColors[index], strokeWidth: 2 },
   markerEnd: {
@@ -115,25 +123,45 @@ function JourneyNodeCard({ data }: NodeProps<JourneyNode>) {
 const nodeTypes = { journey: JourneyNodeCard };
 
 export default function CareerFlow() {
+  const [nodes, , onNodesChange] = useNodesState<JourneyNode>(initialNodes);
+  const [activeId, setActiveId] = useState(initialNodes[0].id);
+  const activeJourney = useMemo(
+    () => nodes.find((node) => node.id === activeId)?.data ?? initialNodes[0].data,
+    [activeId, nodes],
+  );
+
   return (
-    <div className="career-flow">
-      <ReactFlow
-        aria-label="Career journey from data science foundations to future AI product ownership"
-        edges={edges}
-        elementsSelectable={false}
-        fitView
-        fitViewOptions={{ padding: 0.035 }}
-        nodes={nodes}
-        nodesConnectable={false}
-        nodesDraggable={false}
-        nodeTypes={nodeTypes}
-        panOnDrag={false}
-        preventScrolling={false}
-        proOptions={{ hideAttribution: true }}
-        zoomOnDoubleClick={false}
-        zoomOnPinch={false}
-        zoomOnScroll={false}
-      />
+    <div className="career-flow-shell">
+      <div className="career-flow">
+        <ReactFlow
+          aria-label="Interactive career journey from data science foundations to future AI product ownership"
+          edges={edges}
+          elementsSelectable
+          fitView
+          fitViewOptions={{ padding: 0.055 }}
+          maxZoom={1.4}
+          minZoom={0.52}
+          nodes={nodes}
+          nodesConnectable={false}
+          nodesDraggable
+          nodeTypes={nodeTypes}
+          onNodeClick={(_, node) => setActiveId(node.id)}
+          onNodesChange={onNodesChange}
+          panOnDrag
+          preventScrolling={false}
+          proOptions={{ hideAttribution: true }}
+          zoomOnDoubleClick
+          zoomOnPinch
+          zoomOnScroll={false}
+        >
+          <Controls position="bottom-right" showInteractive={false} />
+        </ReactFlow>
+      </div>
+      <div className={`career-flow-inspector career-flow-${activeJourney.brand}`} aria-live="polite">
+        <span>{activeJourney.date}</span>
+        <strong>{activeJourney.title}</strong>
+        <p>{activeJourney.detail}</p>
+      </div>
     </div>
   );
 }
