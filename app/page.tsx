@@ -173,7 +173,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow">Data scientist / Generative AI / Agentic systems</p>
           <h1>
-            I build AI products that turn <em>complexity</em> into business value.
+            Our products have turned <em>complexity</em> into measurable business value.
           </h1>
           <p className="hero-lede">
             Data scientist and AI engineer with more than five years across NLP,
