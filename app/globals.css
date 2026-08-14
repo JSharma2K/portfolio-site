@@ -87,6 +87,21 @@ a {
   width: 34px;
 }
 
+.brand-name {
+  white-space: nowrap;
+}
+
+.brand-role {
+  color: var(--blue);
+  font-family: var(--font-mono), monospace;
+  font-size: clamp(8px, .72vw, 10px);
+  font-weight: 700;
+  letter-spacing: .015em;
+  margin-left: 4px;
+  text-transform: lowercase;
+  white-space: nowrap;
+}
+
 nav {
   align-items: center;
   display: flex;
@@ -134,7 +149,6 @@ nav a:focus-visible {
   z-index: 2;
 }
 
-.eyebrow,
 .section-number,
 .experience-kicker,
 .project-type {
@@ -143,10 +157,6 @@ nav a:focus-visible {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.eyebrow {
-  margin: 0 0 30px;
 }
 
 h1,
@@ -1250,7 +1260,8 @@ footer {
 
 @media (max-width: 720px) {
   .site-header { height: 68px; }
-  .brand > span:last-child,
+  .brand-name,
+  .brand-role,
   nav > a { display: none; }
   .hero { min-height: auto; padding-top: 74px; }
   h1 { font-size: clamp(48px, 15vw, 74px); }

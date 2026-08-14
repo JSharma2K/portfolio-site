@@ -177,7 +177,8 @@ export default function Home() {
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Jivitesh Sharma, home">
           <span className="brand-mark">JS</span>
-          <span>Jivitesh Sharma</span>
+          <span className="brand-name">Jivitesh Sharma</span>
+          <span className="brand-role">[ data scientist / generative AI / agentic systems ]</span>
         </a>
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
@@ -188,7 +189,6 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Data scientist / Generative AI / Agentic systems</p>
           <h1>
             I build AI products that turn <em>complexity</em> into measurable business value.
           </h1>
