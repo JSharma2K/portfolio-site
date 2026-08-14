@@ -389,34 +389,16 @@ h1 em,
 .career-flow-inspector {
   --node-accent: var(--blue-soft);
   background: rgba(8, 13, 22, 0.98);
-  border-top: 1px solid rgba(243, 241, 233, 0.14);
-  display: grid;
-  gap: 4px 18px;
-  grid-template-columns: 90px minmax(0, 1fr);
+  border-top: 2px solid var(--node-accent);
   margin-top: 16px;
-  min-height: 124px;
-  padding: 16px 18px 18px;
-}
-
-.career-flow-inspector > span {
-  color: var(--node-accent);
-  font-family: var(--font-mono), monospace;
-  font-size: 8px;
-  grid-row: 1 / 3;
-  letter-spacing: .06em;
-  padding-top: 3px;
-  text-transform: uppercase;
-}
-
-.career-flow-inspector strong {
-  font-size: 15px;
-  line-height: 1.3;
+  min-height: 108px;
+  padding: 18px 20px 20px;
 }
 
 .career-flow-inspector p {
   color: #d8d8d1;
-  font-size: 11px;
-  line-height: 1.55;
+  font-size: 12px;
+  line-height: 1.65;
   margin: 0;
 }
 
@@ -426,12 +408,8 @@ h1 em,
 }
 
 .career-flow-empty {
-  align-items: center;
-  min-height: 72px;
-}
-
-.career-flow-empty > span {
-  grid-row: auto;
+  border-top-color: rgba(243, 241, 233, 0.14);
+  min-height: 62px;
 }
 
 .ticker {
@@ -1267,8 +1245,6 @@ footer {
   .career-flow { height: 465px; }
   .career-flow .react-flow__node,
   .career-flow-node { width: 330px; }
-  .career-flow-inspector { grid-template-columns: 1fr; }
-  .career-flow-inspector > span { grid-row: auto; }
   .section-heading,
   .experience-card,
   .earlier-roles article { grid-template-columns: 1fr; }
