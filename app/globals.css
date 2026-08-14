@@ -94,7 +94,7 @@ a {
 .brand-role {
   color: var(--blue);
   font-family: var(--font-mono), monospace;
-  font-size: clamp(8px, .72vw, 10px);
+  font-size: clamp(10px, .9vw, 12px);
   font-weight: 700;
   letter-spacing: .015em;
   margin-left: 4px;
