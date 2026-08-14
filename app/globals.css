@@ -1317,40 +1317,95 @@ footer {
 }
 
 @media (max-width: 720px) {
-  .site-header { height: 68px; }
+  .site-header { height: 64px; padding-left: 16px; padding-right: 16px; }
+  .brand-name { font-size: 17px; }
   .brand-role,
-  nav > a { display: none; }
-  .hero { min-height: auto; padding-top: 74px; }
-  .hero-actions { flex-wrap: wrap; }
-  h1 { font-size: clamp(48px, 15vw, 74px); }
-  .career-map { border-radius: 16px; }
-  .career-flow { height: 465px; }
+  nav { display: none; }
+  .hero {
+    gap: 48px;
+    min-height: auto;
+    padding: 56px 20px 72px;
+  }
+  .hero-copy,
+  .career-map { transform: none; }
+  .hero-lede { font-size: 17px; margin-bottom: 30px; }
+  .hero-actions { flex-wrap: wrap; gap: 18px 28px; }
+  .button { min-height: 44px; }
+  h1 { font-size: clamp(46px, 14vw, 66px); }
+  .career-map { border-radius: 16px; max-width: none; }
+  .career-map-header { font-size: 9px; gap: 16px; padding: 14px; }
+  .career-flow { height: 440px; }
   .career-flow .react-flow__node,
-  .career-flow-node { width: 330px; }
+  .career-flow-node { width: min(330px, calc(100vw - 72px)); }
+  .career-flow-node {
+    gap: 12px;
+    grid-template-columns: 52px minmax(0, 1fr);
+    min-height: 78px;
+    padding: 10px 12px;
+  }
+  .career-flow-copy strong { font-size: 13.5px; }
+  .career-flow-inspector { min-height: 0; padding: 18px 16px 20px; }
+  .section { padding: 72px 20px; }
   .section-heading,
   .experience-card,
   .earlier-roles article { grid-template-columns: 1fr; }
+  .section-heading { margin-bottom: 44px; }
+  .section-heading h2 { font-size: clamp(38px, 11.5vw, 48px); line-height: 1.03; }
   .section-heading > p:last-child { grid-column: auto; padding-top: 0; }
-  .experience-meta { display: grid; grid-template-columns: 1fr 1fr; }
-  .company-heading { grid-column: 1 / -1; }
+  .experience-card { gap: 28px; padding: 40px 0 60px; }
+  .experience-meta { display: grid; grid-template-columns: 1fr; }
+  .company-heading { grid-column: auto; }
+  .experience-role-line { grid-column: auto; white-space: normal; }
+  .experience-body h3 { font-size: 30px; }
+  .experience-body > p:not(.experience-kicker),
+  .internship-role p { font-size: 16px; line-height: 1.7; }
   .delivery-strip { grid-template-columns: 1fr; }
   .delivery-strip div + div { border-left: 0; border-top: 1px solid rgba(7,10,16,.15); padding-left: 0; }
   .here-strip div + div { border-color: rgba(72,218,208,.34); }
   .here-experience { padding-left: 0; padding-right: 0; }
+  .here-experience .company-heading { width: 100%; }
+  .msci-ownership summary { min-height: 84px; padding: 24px 48px; }
+  .msci-ownership li { padding-left: 28px; }
+  .ownership-details li,
+  .ownership-panel li { font-size: 14.5px; }
   .journey-grid,
   .capability-grid,
   .project-grid { grid-template-columns: 1fr; }
-  .journey-card { border-right: 1px solid rgba(255,255,255,.28); min-height: 430px; }
-  .project-card { border-right: 1px solid rgba(7,10,16,.2); min-height: 430px; }
+  .journey-card,
+  .capability-grid article,
+  .project-card { min-height: 0; padding: 24px; }
+  .journey-card { border-right: 1px solid rgba(255,255,255,.28); }
+  .project-card { border-right: 1px solid rgba(7,10,16,.2); }
   .journey-card:nth-child(even),
   .journey-card:nth-child(3n) { border-right: 1px solid rgba(255,255,255,.28); }
   .project-card:nth-child(even),
   .project-card:nth-child(3n) { border-right: 1px solid rgba(7,10,16,.2); }
   .journey-topline,
-  .project-index { margin-bottom: 55px; }
+  .project-index { margin-bottom: 38px; }
+  .measurement,
+  .capability-result,
+  .project-outcome { margin-top: 36px; }
+  .contact-section { padding: 80px 20px 52px; }
+  .contact-section h2 {
+    font-size: clamp(42px, 12vw, 58px);
+    line-height: 1;
+    margin: 36px 0 64px;
+  }
   .contact-row { align-items: start; flex-direction: column; gap: 32px; }
+  .contact-row a { align-items: center; display: inline-flex; min-height: 44px; }
+  .contact-row > a { font-size: 16px; overflow-wrap: anywhere; }
   .contact-row div { flex-wrap: wrap; }
-  footer { flex-direction: column; gap: 8px; }
+  footer { flex-direction: column; gap: 12px; line-height: 1.6; margin: 0 20px; }
+  .footer-identity { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .footer-role { white-space: normal; }
+}
+
+@media (max-width: 420px) {
+  .hero-actions { align-items: flex-start; flex-direction: column; }
+  .career-map-header span:last-child { text-align: right; }
+  .career-flow .react-flow__controls { display: none; }
+  .tag-row { grid-template-columns: 1fr; }
+  .msci-ownership summary { padding-left: 18px; padding-right: 48px; text-align: left; }
 }
 
 @media (prefers-reduced-motion: reduce) {
