@@ -155,7 +155,7 @@ function CompanyLogo({ company }: { company: "msci" | "here" }) {
   return (
     <span className={`company-logo ${isMsci ? "msci-logo" : "here-logo"}`}>
       <img
-        src={isMsci ? "/msci-logo.svg" : "/here-logo.svg"}
+        src={isMsci ? "/msci-logo.svg" : "/here-logo-reference.svg"}
         alt={isMsci ? "MSCI" : "HERE Technologies"}
       />
     </span>
@@ -323,6 +323,7 @@ export default function Home() {
           <div className="experience-meta">
             <div className="company-heading">
               <CompanyLogo company="here" />
+              <p>HERE Technologies</p>
             </div>
             <span>2022 to Mar 2024</span>
             <span>Data Scientist</span>
