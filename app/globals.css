@@ -557,6 +557,10 @@ h1 em,
   font-weight: inherit;
 }
 
+.impact-text {
+  color: var(--blue);
+}
+
 .delivery-strip {
   border-bottom: 1px solid rgba(7, 10, 16, 0.15);
   border-top: 1px solid rgba(7, 10, 16, 0.15);

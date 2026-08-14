@@ -304,15 +304,15 @@ export default function Home() {
               <span className="ownership-plus" aria-hidden="true">+</span>
             </summary>
             <ul>
-              <li><strong>Retrieval became semantic.</strong> Extended BM25 page ranking with BERT-based semantic detection and reranking. This increased relevant-page coverage and improved the evidence presented to downstream extraction.</li>
+              <li><strong>Retrieval became semantic.</strong> Extended BM25 page ranking with <span className="impact-text">BERT-based semantic detection and reranking</span>. This increased relevant-page coverage and improved the evidence presented to downstream extraction.</li>
               <li><strong>Prompts became methodology aware.</strong> Applied few-shot patterns and structured instructions, then designed a prompt-builder agent that interpreted methodology documents and assembled task-specific extraction prompts.</li>
               <li><strong>Extraction became controlled.</strong> Added preprocessing, schema-aware post-processing, data cleansing, validation, evidence checks and explicit hallucination controls before outputs could move forward.</li>
-              <li><strong>Quality became measurable.</strong> Built a ground-truth assessment pipeline that calculated precision and recall at the data-point level, compared prompt and model variants, exposed failure modes and supported regression testing.</li>
-              <li><strong>Dataset performance improved materially.</strong> Single-handedly advanced multiple extraction datasets from below 50% precision and recall to &gt;90% recall and &gt;80% precision through focused retrieval, prompting, validation and evaluation improvements.</li>
+              <li><strong>Quality became measurable.</strong> Built a <span className="impact-text">ground-truth assessment pipeline</span> that calculated precision and recall at the data-point level, compared prompt and model variants, exposed failure modes and supported regression testing.</li>
+              <li><strong>Dataset performance improved materially.</strong> Single-handedly advanced multiple extraction datasets from below 50% precision and recall to <span className="impact-text">&gt;90% recall and &gt;80% precision</span> through an architectural shift from a prompting-based LLM system to an <span className="impact-text">agentic workflow</span>.</li>
               <li><strong>The workflow became agentic.</strong> Re-architected extraction with CrewAI agents for prompt building, document extraction, cleansing and validation. Agents used defined tools and skills instead of relying on one oversized prompt.</li>
-              <li><strong>Orchestration became task aware.</strong> Designed sequential and hierarchical flows, agent-to-agent communication, context services and memory patterns that preserved methodology, evidence and intermediate decisions.</li>
-              <li><strong>Delivery became conversational.</strong> Extended the system into an AG-UI experience where users could upload documents, explain the requested data and guide extraction while the same evaluation and human-review controls remained in place.</li>
-              <li><strong>Evaluation moved beyond the model.</strong> Deployed workflows on GCP and Vertex AI, then assessed grounding, tool execution, handoffs and end-to-end completion across the full agent system.</li>
+              <li><strong>Orchestration became task aware.</strong> Designed <span className="impact-text">sequential and hierarchical flows</span>, agent-to-agent communication, context services and memory patterns that preserved methodology, evidence and intermediate decisions.</li>
+              <li><strong>Delivery became conversational.</strong> Extended the system into an <span className="impact-text">AG-UI experience</span> where users could upload documents, explain the requested data and guide extraction while the same evaluation and human-review controls remained in place.</li>
+              <li><strong>Evaluation moved beyond the model.</strong> Deployed workflows on <span className="impact-text">GCP and Vertex AI</span>, then assessed grounding, tool execution, handoffs and end-to-end completion across the full agent system.</li>
             </ul>
           </details>
         </article>
