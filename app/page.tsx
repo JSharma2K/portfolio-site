@@ -178,8 +178,8 @@ export default function Home() {
           <p className="hero-lede">
             Data scientist and AI engineer with more than five years across NLP,
             computer vision, graph learning, geospatial intelligence, classical ML
-            and generative AI. I connect model design, evaluation and cloud delivery
-            to build systems people can use and trust.
+            and generative AI. I connect model design, evaluation, and cloud delivery
+            to build systems people and companies can use and trust.
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Explore the work <Arrow /></a>
