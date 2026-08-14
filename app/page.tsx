@@ -176,7 +176,6 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Jivitesh Sharma, home">
-          <span className="brand-mark">JS</span>
           <span className="brand-name">Jivitesh Sharma</span>
           <span className="brand-role">[ DATA SCIENTIST / GENERATIVE AI / AGENTIC SYSTEMS ]</span>
         </a>

@@ -74,20 +74,10 @@ a {
   letter-spacing: -0.02em;
 }
 
-.brand-mark {
-  align-items: center;
-  background: var(--blue);
-  border-radius: 50%;
-  display: inline-flex;
-  font-family: var(--font-mono), monospace;
-  font-size: 10px;
-  height: 34px;
-  justify-content: center;
-  letter-spacing: 0.08em;
-  width: 34px;
-}
-
 .brand-name {
+  font-size: clamp(16px, 1.3vw, 20px);
+  font-weight: 800;
+  letter-spacing: -.035em;
   white-space: nowrap;
 }
 
@@ -1328,7 +1318,6 @@ footer {
 
 @media (max-width: 720px) {
   .site-header { height: 68px; }
-  .brand-name,
   .brand-role,
   nav > a { display: none; }
   .hero { min-height: auto; padding-top: 74px; }
