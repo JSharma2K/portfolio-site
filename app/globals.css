@@ -397,7 +397,6 @@ h1 em,
 }
 
 .career-flow-inspector {
-  --node-accent: var(--blue-soft);
   align-items: stretch;
   background: rgba(8, 13, 22, 0.98);
   border-top: 2px solid var(--node-accent);
@@ -408,6 +407,23 @@ h1 em,
   margin-top: 16px;
   min-height: 126px;
   padding: 20px 22px 22px;
+  transition: border-color 180ms ease;
+}
+
+.career-flow-inspector.career-flow-foundation {
+  --node-accent: var(--blue-soft);
+}
+
+.career-flow-inspector.career-flow-here {
+  --node-accent: var(--here-mint);
+}
+
+.career-flow-inspector.career-flow-msci {
+  --node-accent: var(--blue);
+}
+
+.career-flow-inspector.career-flow-future {
+  --node-accent: var(--lime);
 }
 
 .career-flow-inspector p {
