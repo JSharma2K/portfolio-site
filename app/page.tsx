@@ -201,6 +201,13 @@ export default function Home() {
           <div className="hero-actions">
             <a className="button button-primary" href="#work">Explore the work <Arrow /></a>
             <a className="button button-secondary" href="#contact">Start a conversation</a>
+            <a
+              className="button button-resume"
+              download="Jivitesh-Sharma-Resume.pdf"
+              href="/Jivitesh-Sharma-Resume.pdf"
+            >
+              Download full résumé <span aria-hidden="true">↓</span>
+            </a>
           </div>
         </div>
 

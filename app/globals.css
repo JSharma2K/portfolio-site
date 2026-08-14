@@ -231,6 +231,15 @@ h1 em,
   color: var(--lime);
 }
 
+.button-resume {
+  color: var(--blue-soft);
+}
+
+.button-resume:hover,
+.button-resume:focus-visible {
+  color: var(--lime);
+}
+
 .career-map {
   background: linear-gradient(145deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
   border: 1px solid var(--line);
