@@ -137,7 +137,7 @@ export default function CareerFlow() {
           edges={edges}
           elementsSelectable
           fitView
-          fitViewOptions={{ padding: 0.055 }}
+          fitViewOptions={{ padding: 0.1 }}
           maxZoom={1.4}
           minZoom={0.52}
           nodes={nodes}

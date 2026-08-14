@@ -249,7 +249,7 @@ h1 em,
 }
 
 .career-flow {
-  height: 455px;
+  height: 480px;
   width: 100%;
 }
 
@@ -393,6 +393,7 @@ h1 em,
   display: grid;
   gap: 4px 18px;
   grid-template-columns: 90px minmax(0, 1fr);
+  margin-top: 16px;
   min-height: 124px;
   padding: 16px 18px 18px;
 }
@@ -1263,7 +1264,7 @@ footer {
   .hero { min-height: auto; padding-top: 74px; }
   h1 { font-size: clamp(48px, 15vw, 74px); }
   .career-map { border-radius: 16px; }
-  .career-flow { height: 440px; }
+  .career-flow { height: 465px; }
   .career-flow .react-flow__node,
   .career-flow-node { width: 330px; }
   .career-flow-inspector { grid-template-columns: 1fr; }
