@@ -40,7 +40,7 @@ const initialNodes: JourneyNode[] = [
   {
     id: "here",
     type: "journey",
-    position: { x: 70, y: 152 },
+    position: { x: 260, y: 0 },
     data: {
       date: "2021 to 2024",
       title: "Production ML and graph systems",
@@ -52,7 +52,7 @@ const initialNodes: JourneyNode[] = [
   {
     id: "msci",
     type: "journey",
-    position: { x: 0, y: 304 },
+    position: { x: 520, y: 0 },
     data: {
       date: "2024 to Present",
       title: "Generative and agentic AI",
@@ -64,7 +64,7 @@ const initialNodes: JourneyNode[] = [
   {
     id: "future",
     type: "journey",
-    position: { x: 70, y: 456 },
+    position: { x: 780, y: 0 },
     data: {
       date: "What comes next",
       title: "Wider AI product and systems ownership",
@@ -81,7 +81,7 @@ const edges: Edge[] = ["foundation", "here", "msci"].map((source, index) => ({
   id: `${source}-to-${initialNodes[index + 1].id}`,
   source,
   target: initialNodes[index + 1].id,
-  type: "smoothstep",
+  type: "straight",
   style: { stroke: edgeColors[index], strokeWidth: 2 },
   markerEnd: {
     type: MarkerType.ArrowClosed,
@@ -106,16 +106,15 @@ function JourneyMark({ brand }: { brand: JourneyData["brand"] }) {
 function JourneyNodeCard({ data }: NodeProps<JourneyNode>) {
   return (
     <article className={`career-flow-node career-flow-${data.brand}`}>
-      <Handle className="career-flow-handle" type="target" position={Position.Top} />
+      <Handle className="career-flow-handle" type="target" position={Position.Left} />
       <div className="career-flow-brand">
         <JourneyMark brand={data.brand} />
       </div>
       <div className="career-flow-copy">
         <span className="career-flow-date">{data.date}</span>
         <strong>{data.title}</strong>
-        <p>{data.copy}</p>
       </div>
-      <Handle className="career-flow-handle" type="source" position={Position.Bottom} />
+      <Handle className="career-flow-handle" type="source" position={Position.Right} />
     </article>
   );
 }
@@ -124,9 +123,9 @@ const nodeTypes = { journey: JourneyNodeCard };
 
 export default function CareerFlow() {
   const [nodes, , onNodesChange] = useNodesState<JourneyNode>(initialNodes);
-  const [activeId, setActiveId] = useState(initialNodes[0].id);
+  const [activeId, setActiveId] = useState<string | null>(null);
   const activeJourney = useMemo(
-    () => nodes.find((node) => node.id === activeId)?.data ?? initialNodes[0].data,
+    () => nodes.find((node) => node.id === activeId)?.data,
     [activeId, nodes],
   );
 
@@ -147,6 +146,7 @@ export default function CareerFlow() {
           nodeTypes={nodeTypes}
           onNodeClick={(_, node) => setActiveId(node.id)}
           onNodesChange={onNodesChange}
+          onPaneClick={() => setActiveId(null)}
           panOnDrag
           preventScrolling={false}
           proOptions={{ hideAttribution: true }}
@@ -157,11 +157,21 @@ export default function CareerFlow() {
           <Controls position="bottom-right" showInteractive={false} />
         </ReactFlow>
       </div>
-      <div className={`career-flow-inspector career-flow-${activeJourney.brand}`} aria-live="polite">
-        <span>{activeJourney.date}</span>
-        <strong>{activeJourney.title}</strong>
-        <p>{activeJourney.detail}</p>
-      </div>
+      {activeJourney ? (
+        <div className={`career-flow-inspector career-flow-${activeJourney.brand}`} aria-live="polite">
+          <span>{activeJourney.date}</span>
+          <strong>{activeJourney.title}</strong>
+          <div>
+            <p>{activeJourney.copy}</p>
+            <p>{activeJourney.detail}</p>
+          </div>
+        </div>
+      ) : (
+        <div className="career-flow-inspector career-flow-empty" aria-live="polite">
+          <span>Explore</span>
+          <strong>Click any career stage to see the details below.</strong>
+        </div>
+      )}
     </div>
   );
 }
