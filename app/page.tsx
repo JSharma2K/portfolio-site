@@ -266,8 +266,7 @@ export default function Home() {
             <div className="company-heading">
               <CompanyLogo company="msci" />
             </div>
-            <span>Apr 2024 to Present</span>
-            <span>AI/NLP Engineer</span>
+            <p className="experience-role-line">April 2024 to Present / AI/NLP Engineer</p>
           </div>
           <div className="experience-body">
             <p className="experience-kicker">Enterprise document intelligence and agentic AI</p>
@@ -325,8 +324,7 @@ export default function Home() {
               <CompanyLogo company="here" />
               <p>HERE Technologies</p>
             </div>
-            <span>2022 to Mar 2024</span>
-            <span>Data Scientist</span>
+            <p className="experience-role-line">2022 to March 2024 / Junior Data Scientist</p>
           </div>
           <div className="experience-body">
             <p className="experience-kicker">Geospatial ML, graph learning and production mapping</p>

@@ -487,12 +487,12 @@ h1 em,
 }
 
 .company-logo.here-logo {
-  background: transparent;
+  background: white;
   border: 0;
   border-radius: 0;
-  height: 76px;
-  padding: 0;
-  width: 84px;
+  height: 100px;
+  padding: 9px;
+  width: 106px;
 }
 
 .company-heading .company-logo.msci-logo img {
@@ -502,7 +502,7 @@ h1 em,
 }
 
 .company-heading .company-logo.here-logo img {
-  height: 72px;
+  height: 80px;
   width: auto;
 }
 
@@ -538,13 +538,23 @@ h1 em,
   width: auto;
 }
 
-.experience-meta span {
-  color: rgba(7, 10, 16, 0.6);
-  display: block;
+.experience-role-line {
+  grid-column: 1 / -1;
   font-family: var(--font-mono), monospace;
   font-size: 10px;
-  margin: 5px 0;
+  letter-spacing: .01em;
+  line-height: 1.45;
+  margin: 5px 0 0;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.msci-experience .experience-role-line {
+  color: var(--blue);
+}
+
+.here-experience .experience-role-line {
+  color: white;
 }
 
 .experience-body h3 {
