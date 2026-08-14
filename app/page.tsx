@@ -1,4 +1,5 @@
 import CareerFlow from "./CareerFlow";
+import MobileMenu from "./MobileMenu";
 
 const marqueeSkills = [
   "Classical machine learning",
@@ -181,11 +182,12 @@ export default function Home() {
           <span className="brand-name">Jivitesh Sharma</span>
           <span className="brand-role">[ DATA SCIENTIST / GENERATIVE AI / AGENTIC SYSTEMS ]</span>
         </a>
-        <nav aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label="Primary navigation">
           <a href="#work">Work</a>
           <a href="#systems">Systems</a>
           <a href="#projects">Projects</a>
         </nav>
+        <MobileMenu />
       </header>
 
       <section className="hero" id="top">

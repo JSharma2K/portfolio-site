@@ -12,7 +12,7 @@ import {
   useNodesState,
 } from "@xyflow/react";
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type JourneyData = {
   date: string;
@@ -124,10 +124,20 @@ const nodeTypes = { journey: JourneyNodeCard };
 export default function CareerFlow() {
   const [nodes, , onNodesChange] = useNodesState<JourneyNode>(initialNodes);
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [isPhone, setIsPhone] = useState(false);
   const activeJourney = useMemo(
     () => nodes.find((node) => node.id === activeId)?.data,
     [activeId, nodes],
   );
+
+  useEffect(() => {
+    const phoneQuery = window.matchMedia("(max-width: 720px)");
+    const updatePhoneMode = () => setIsPhone(phoneQuery.matches);
+
+    updatePhoneMode();
+    phoneQuery.addEventListener("change", updatePhoneMode);
+    return () => phoneQuery.removeEventListener("change", updatePhoneMode);
+  }, []);
 
   return (
     <div className="career-flow-shell">
@@ -142,16 +152,16 @@ export default function CareerFlow() {
           minZoom={0.52}
           nodes={nodes}
           nodesConnectable={false}
-          nodesDraggable
+          nodesDraggable={!isPhone}
           nodeTypes={nodeTypes}
           onNodeClick={(_, node) => setActiveId(node.id)}
           onNodesChange={onNodesChange}
           onPaneClick={() => setActiveId(null)}
-          panOnDrag
+          panOnDrag={!isPhone}
           preventScrolling={false}
           proOptions={{ hideAttribution: true }}
-          zoomOnDoubleClick
-          zoomOnPinch
+          zoomOnDoubleClick={!isPhone}
+          zoomOnPinch={!isPhone}
           zoomOnScroll={false}
         >
           <Controls position="top-right" showInteractive={false} />
