@@ -377,10 +377,8 @@ export default function Home() {
 
       <section className="section systems-section" id="systems">
         <div className="section-heading split-heading">
-          <div>
-            <p className="section-number">03 / Systems and data science journey</p>
-            <h2>Architectures expanded. System thinking stayed consistent.</h2>
-          </div>
+          <p className="section-number">03 / Systems and data science journey</p>
+          <h2>Architectures expanded. System thinking stayed consistent.</h2>
           <p>
             Each stage added a new way to represent a problem: tables, sequences,
             images, graphs, documents and finally multi-agent workflows. The model
@@ -409,10 +407,8 @@ export default function Home() {
 
       <section className="section projects-section" id="projects">
         <div className="section-heading split-heading">
-          <div>
-            <p className="section-number">04 / Selected projects</p>
-            <h2>Earlier foundations that still inform the work.</h2>
-          </div>
+          <p className="section-number">04 / Selected projects</p>
+          <h2>Earlier foundations that still inform the work.</h2>
           <p>These projects built range across conversational AI, sequence modelling, computer vision, classical ML, NLP and embedded systems.</p>
         </div>
         <div className="project-grid">
