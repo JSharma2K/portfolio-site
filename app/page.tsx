@@ -162,7 +162,7 @@ function CompanyLogo({
   return (
     <span className={`company-logo ${isMsci ? "msci-logo" : "here-logo"}`}>
       <img
-        src={isMsci ? "/msci-logo.svg" : isPressHere ? "/here-logo-press.jpg" : "/here-logo-reference.svg"}
+        src={isMsci ? "/msci-logo.svg" : isPressHere ? "/here-logo-transparent.png" : "/here-logo-reference.svg"}
         alt={isMsci ? "MSCI" : "HERE Technologies"}
       />
     </span>
