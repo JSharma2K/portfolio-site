@@ -7,7 +7,7 @@ const marqueeSkills = [
   "Generative AI",
   "LLMs",
   "Agentic AI",
-  "Cloud production systems",
+  "Harness engineering",
   "Production delivery",
 ];
 
