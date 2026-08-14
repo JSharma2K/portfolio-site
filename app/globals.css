@@ -58,7 +58,7 @@ a {
   height: 76px;
   justify-content: space-between;
   left: 0;
-  padding: 0 clamp(24px, 5vw, 76px);
+  padding: 0 clamp(24px, 5vw, 76px) 0 clamp(16px, 2vw, 28px);
   position: sticky;
   right: 0;
   top: 0;
