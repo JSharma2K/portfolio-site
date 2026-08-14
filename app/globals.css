@@ -479,20 +479,31 @@ h1 em,
 }
 
 .company-logo.msci-logo {
-  background: #0626a9;
-  padding: 9px 12px;
-  width: 112px;
+  background: transparent;
+  border-radius: 0;
+  height: 48px;
+  padding: 0;
+  width: 152px;
 }
 
 .company-logo.here-logo {
-  background: white;
-  border: 1px solid rgba(9, 39, 50, .12);
-  padding: 5px 12px;
-  width: 66px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  height: 58px;
+  padding: 0;
+  width: 72px;
 }
 
-.company-logo.here-logo img {
-  height: 32px;
+.company-heading .company-logo.msci-logo img {
+  filter: brightness(0) saturate(100%) invert(16%) sepia(97%) saturate(4171%) hue-rotate(230deg) brightness(73%) contrast(113%);
+  height: auto;
+  width: 148px;
+}
+
+.company-heading .company-logo.here-logo img {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(42%) saturate(967%) hue-rotate(122deg) brightness(101%) contrast(91%);
+  height: 54px;
   width: auto;
 }
 

@@ -265,7 +265,6 @@ export default function Home() {
           <div className="experience-meta">
             <div className="company-heading">
               <CompanyLogo company="msci" />
-              <p>MSCI</p>
             </div>
             <span>Apr 2024 to Present</span>
             <span>AI/NLP Engineer</span>
@@ -324,7 +323,6 @@ export default function Home() {
           <div className="experience-meta">
             <div className="company-heading">
               <CompanyLogo company="here" />
-              <p>HERE Technologies</p>
             </div>
             <span>2022 to Mar 2024</span>
             <span>Data Scientist</span>
