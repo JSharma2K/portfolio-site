@@ -95,10 +95,10 @@ a {
   color: var(--blue);
   font-family: var(--font-mono), monospace;
   font-size: clamp(10px, .9vw, 12px);
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: .015em;
   margin-left: 4px;
-  text-transform: lowercase;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -1286,6 +1286,20 @@ footer {
   margin: 0 clamp(24px, 6vw, 92px);
   padding: 22px 0 34px;
   text-transform: uppercase;
+}
+
+.footer-identity {
+  align-items: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-role {
+  color: var(--blue);
+  font-weight: 800;
+  letter-spacing: .015em;
+  white-space: nowrap;
 }
 
 @media (max-width: 1180px) {

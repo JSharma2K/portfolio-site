@@ -178,7 +178,7 @@ export default function Home() {
         <a className="brand" href="#top" aria-label="Jivitesh Sharma, home">
           <span className="brand-mark">JS</span>
           <span className="brand-name">Jivitesh Sharma</span>
-          <span className="brand-role">[ data scientist / generative AI / agentic systems ]</span>
+          <span className="brand-role">[ DATA SCIENTIST / GENERATIVE AI / AGENTIC SYSTEMS ]</span>
         </a>
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
@@ -426,7 +426,7 @@ export default function Home() {
 
       <section className="contact-section" id="contact">
         <p className="section-number">05 / Contact</p>
-        <h2>Building an AI product that needs strong models and <em>dependable systems?</em></h2>
+        <h2>Ready to build AI systems that <em>work reliably</em> in your business?</h2>
         <div className="contact-row">
           <a href="mailto:sharmajivitesh2@gmail.com">sharmajivitesh2@gmail.com <Arrow /></a>
           <div>
@@ -437,7 +437,10 @@ export default function Home() {
       </section>
 
       <footer>
-        <span>Jivitesh Sharma / Data Scientist and AI Systems Engineer</span>
+        <span className="footer-identity">
+          <span>Jivitesh Sharma</span>
+          <span className="footer-role">[ DATA SCIENTIST / GENERATIVE AI / AGENTIC SYSTEMS ]</span>
+        </span>
         <span>Models, evaluation, architecture and delivery.</span>
       </footer>
     </main>
