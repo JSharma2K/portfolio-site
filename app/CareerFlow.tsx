@@ -159,12 +159,12 @@ export default function CareerFlow() {
       </div>
       {activeJourney ? (
         <div className={`career-flow-inspector career-flow-${activeJourney.brand}`} aria-live="polite">
-          <p>{activeJourney.copy}</p>
-          <p>{activeJourney.detail}</p>
+          <p className="career-flow-primary-description">{activeJourney.copy}</p>
+          <p className="career-flow-supporting-description">{activeJourney.detail}</p>
         </div>
       ) : (
         <div className="career-flow-inspector career-flow-empty" aria-live="polite">
-          <p>Click any career stage to see its description below.</p>
+          <p className="career-flow-supporting-description">Click any career stage to see its description below.</p>
         </div>
       )}
     </div>
