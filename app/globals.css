@@ -191,7 +191,7 @@ h1 em,
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: clamp(28px, 4vw, 48px);
 }
 
@@ -206,6 +206,7 @@ h1 em,
   padding: 4px 0;
   text-transform: uppercase;
   transition: color 180ms ease, transform 180ms ease;
+  white-space: nowrap;
 }
 
 .button:hover,
@@ -1267,6 +1268,11 @@ footer {
   text-transform: uppercase;
 }
 
+@media (max-width: 1180px) {
+  .hero { grid-template-columns: 1fr; }
+  .career-map { justify-self: start; max-width: 500px; }
+}
+
 @media (max-width: 1040px) {
   .hero { grid-template-columns: 1fr; }
   .career-map { justify-self: start; max-width: 500px; }
@@ -1289,6 +1295,7 @@ footer {
   .brand-role,
   nav > a { display: none; }
   .hero { min-height: auto; padding-top: 74px; }
+  .hero-actions { flex-wrap: wrap; }
   h1 { font-size: clamp(48px, 15vw, 74px); }
   .career-map { border-radius: 16px; }
   .career-flow { height: 465px; }

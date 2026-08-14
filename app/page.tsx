@@ -206,7 +206,7 @@ export default function Home() {
               download="Jivitesh-Sharma-Resume.pdf"
               href="/Jivitesh-Sharma-Resume.pdf"
             >
-              Download full résumé <span aria-hidden="true">↓</span>
+              Download full resume <span aria-hidden="true">↓</span>
             </a>
           </div>
         </div>
@@ -357,10 +357,28 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="section capability-section">
+        <div className="section-heading">
+          <p className="section-number">02 / Product delivery</p>
+          <h2>Technical depth that comes together in working production systems.</h2>
+          <p>The main result is not a list of technologies. It is the set of AI and ML systems shipped into real workflows across MSCI and HERE Technologies.</p>
+        </div>
+        <div className="capability-grid">
+          {capabilities.map((item) => (
+            <article key={item.index}>
+              <div className="capability-topline"><span>{item.index}</span><strong>{item.company}</strong></div>
+              <h3>{item.title}</h3>
+              <p>{item.copy}</p>
+              <div className="capability-result">{item.result}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="section systems-section" id="systems">
         <div className="section-heading split-heading">
           <div>
-            <p className="section-number">02 / Systems and data science journey</p>
+            <p className="section-number">03 / Systems and data science journey</p>
             <h2>Architectures expanded. System thinking stayed consistent.</h2>
           </div>
           <p>
@@ -384,24 +402,6 @@ export default function Home() {
                 <span>Measured through</span>
                 <strong>{item.measurement}</strong>
               </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="section capability-section">
-        <div className="section-heading">
-          <p className="section-number">03 / Product delivery</p>
-          <h2>Technical depth that comes together in working production systems.</h2>
-          <p>The main result is not a list of technologies. It is the set of AI and ML systems shipped into real workflows across MSCI and HERE Technologies.</p>
-        </div>
-        <div className="capability-grid">
-          {capabilities.map((item) => (
-            <article key={item.index}>
-              <div className="capability-topline"><span>{item.index}</span><strong>{item.company}</strong></div>
-              <h3>{item.title}</h3>
-              <p>{item.copy}</p>
-              <div className="capability-result">{item.result}</div>
             </article>
           ))}
         </div>
