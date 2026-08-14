@@ -839,6 +839,28 @@ h1 em,
   margin: 0;
 }
 
+.earlier-roles .internship-role {
+  padding-bottom: 44px;
+  padding-top: 44px;
+}
+
+.internship-role h3 {
+  font-size: clamp(23px, 2.4vw, 34px);
+  letter-spacing: -.035em;
+  margin-bottom: 14px;
+}
+
+.internship-role p {
+  font-size: 17px;
+  line-height: 1.75;
+  max-width: 980px;
+}
+
+.here-impact {
+  color: var(--here-mint);
+  font-weight: 650;
+}
+
 .systems-section {
   background: var(--blue);
 }

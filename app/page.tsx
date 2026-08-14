@@ -365,13 +365,21 @@ export default function Home() {
         </article>
 
         <div className="earlier-roles">
-          <article>
+          <article className="internship-role">
             <span>2021</span>
-            <div><h3>Data Science Intern / HERE Technologies</h3><p>Processed geospatial data, transformed map tiles across coordinate systems, supported production ML components and researched network alignment with GraphSAGE, HinSAGE, GCNs and PyTorch Geometric.</p></div>
-          </article>
-          <article>
-            <span>2021</span>
-            <div><h3>Consultant Data Scientist / Edelman</h3><p>Built NLP and social-listening workflows for market intelligence, including sentiment analysis for Qualcomm and web-scraping plus gap analysis for Logitech.</p></div>
+            <div>
+              <h3>Data Science Intern / HERE Technologies</h3>
+              <p>
+                Worked with large-scale geospatial datasets, transformed map tiles across
+                coordinate systems and prepared road-network features for downstream modelling.
+                Supported production ML components and researched network alignment using{" "}
+                <span className="here-impact">GraphSAGE, HinSAGE and graph convolutional networks</span>
+                {" "}with <span className="here-impact">PyTorch Geometric</span>. Evaluated node
+                embeddings and candidate road matches through{" "}
+                <span className="here-impact">cosine similarity and alignment quality</span>,
+                establishing the graph-learning foundation for my later production work.
+              </p>
+            </div>
           </article>
         </div>
       </section>
