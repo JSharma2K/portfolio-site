@@ -110,7 +110,7 @@ nav a:focus-visible {
   align-items: center;
   display: grid;
   gap: clamp(54px, 7vw, 100px);
-  grid-template-columns: minmax(0, 1.12fr) minmax(380px, 0.88fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(420px, 0.9fr);
   min-height: calc(100vh - 76px);
   overflow: hidden;
   padding: clamp(72px, 9vw, 140px) clamp(24px, 6vw, 92px);
@@ -227,7 +227,7 @@ h1 em,
   border-radius: 22px;
   box-shadow: 0 32px 100px rgba(0, 0, 0, 0.32);
   justify-self: end;
-  max-width: 460px;
+  max-width: 500px;
   overflow: hidden;
   width: 100%;
 }
@@ -249,7 +249,7 @@ h1 em,
 }
 
 .career-flow {
-  height: 380px;
+  height: 455px;
   width: 100%;
 }
 
@@ -264,7 +264,7 @@ h1 em,
 .career-flow .react-flow__node {
   cursor: grab;
   transition: filter 180ms ease;
-  width: 360px;
+  width: 390px;
 }
 
 .career-flow .react-flow__node:active {
@@ -293,11 +293,11 @@ h1 em,
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.24);
   display: grid;
   align-content: center;
-  gap: 13px;
-  grid-template-columns: 58px minmax(0, 1fr);
-  min-height: 76px;
-  padding: 10px 14px;
-  width: 360px;
+  gap: 15px;
+  grid-template-columns: 64px minmax(0, 1fr);
+  min-height: 82px;
+  padding: 11px 16px;
+  width: 390px;
 }
 
 .career-flow-foundation {
@@ -324,19 +324,19 @@ h1 em,
   font-size: 16px;
   font-weight: 700;
   justify-content: center;
-  min-height: 38px;
+  min-height: 42px;
 }
 
 .career-flow-brand img {
   display: block;
   height: auto;
-  max-height: 38px;
-  max-width: 58px;
+  max-height: 41px;
+  max-width: 62px;
 }
 
 .career-flow-here .career-flow-brand img {
-  max-height: 42px;
-  max-width: 48px;
+  max-height: 45px;
+  max-width: 52px;
 }
 
 .career-flow-msci .career-flow-brand img {
@@ -347,7 +347,7 @@ h1 em,
   color: var(--node-accent);
   display: block;
   font-family: var(--font-mono), monospace;
-  font-size: 7.5px;
+  font-size: 8px;
   letter-spacing: .06em;
   margin-bottom: 3px;
   text-transform: uppercase;
@@ -355,7 +355,7 @@ h1 em,
 
 .career-flow-copy strong {
   display: block;
-  font-size: 13.5px;
+  font-size: 14.5px;
   letter-spacing: -.02em;
   line-height: 1.3;
 }
@@ -1242,7 +1242,7 @@ footer {
 
 @media (max-width: 1040px) {
   .hero { grid-template-columns: 1fr; }
-  .career-map { justify-self: start; max-width: 460px; }
+  .career-map { justify-self: start; max-width: 500px; }
   .section-heading { grid-template-columns: 1fr 2fr; }
   .section-heading > p:last-child { grid-column: 2; }
   .split-heading { grid-template-columns: 1fr; }
@@ -1263,7 +1263,7 @@ footer {
   .hero { min-height: auto; padding-top: 74px; }
   h1 { font-size: clamp(48px, 15vw, 74px); }
   .career-map { border-radius: 16px; }
-  .career-flow { height: 370px; }
+  .career-flow { height: 440px; }
   .career-flow .react-flow__node,
   .career-flow-node { width: 330px; }
   .career-flow-inspector { grid-template-columns: 1fr; }
