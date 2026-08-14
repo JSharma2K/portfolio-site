@@ -40,7 +40,7 @@ const initialNodes: JourneyNode[] = [
   {
     id: "here",
     type: "journey",
-    position: { x: 260, y: 0 },
+    position: { x: 0, y: 92 },
     data: {
       date: "2021 to 2024",
       title: "Production ML and graph systems",
@@ -52,7 +52,7 @@ const initialNodes: JourneyNode[] = [
   {
     id: "msci",
     type: "journey",
-    position: { x: 520, y: 0 },
+    position: { x: 0, y: 184 },
     data: {
       date: "2024 to Present",
       title: "Generative and agentic AI",
@@ -64,7 +64,7 @@ const initialNodes: JourneyNode[] = [
   {
     id: "future",
     type: "journey",
-    position: { x: 780, y: 0 },
+    position: { x: 0, y: 276 },
     data: {
       date: "What comes next",
       title: "Wider AI product and systems ownership",
@@ -106,7 +106,7 @@ function JourneyMark({ brand }: { brand: JourneyData["brand"] }) {
 function JourneyNodeCard({ data }: NodeProps<JourneyNode>) {
   return (
     <article className={`career-flow-node career-flow-${data.brand}`}>
-      <Handle className="career-flow-handle" type="target" position={Position.Left} />
+      <Handle className="career-flow-handle" type="target" position={Position.Top} />
       <div className="career-flow-brand">
         <JourneyMark brand={data.brand} />
       </div>
@@ -114,7 +114,7 @@ function JourneyNodeCard({ data }: NodeProps<JourneyNode>) {
         <span className="career-flow-date">{data.date}</span>
         <strong>{data.title}</strong>
       </div>
-      <Handle className="career-flow-handle" type="source" position={Position.Right} />
+      <Handle className="career-flow-handle" type="source" position={Position.Bottom} />
     </article>
   );
 }
@@ -154,7 +154,7 @@ export default function CareerFlow() {
           zoomOnPinch
           zoomOnScroll={false}
         >
-          <Controls position="bottom-right" showInteractive={false} />
+          <Controls position="top-right" showInteractive={false} />
         </ReactFlow>
       </div>
       {activeJourney ? (
