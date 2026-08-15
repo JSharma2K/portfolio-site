@@ -72,7 +72,7 @@ const capabilities = [
     index: "A",
     company: "MSCI / Production",
     title: "Petabyte-scale document extraction",
-    copy: "Delivered production document extraction across company annual reports, disclosures and large PDF corpora. Designed the complete path from evidence discovery and data preparation to traceable structured outputs for commercial datasets.",
+    copy: "Delivered production document extraction across company annual reports, disclosures and large PDF corpora. Designed the complete path from evidence discovery and data preparation to traceable structured outputs for proprietary datasets.",
     result: "Annual reports / regulated PDFs / structured data",
   },
   {
