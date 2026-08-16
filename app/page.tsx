@@ -286,17 +286,36 @@ export default function Home() {
               <span className="ownership-plus" aria-hidden="true">+</span>
             </summary>
             <ul>
+              <li><strong>Ambiguous requirements became an executable plan.</strong> Worked from methodology definitions, dataset behavior and known failure modes to scope each extraction workflow, define evidence and output schemas, and establish <span className="impact-text">measurable acceptance criteria</span> before rollout.</li>
               <li><strong>Retrieval became semantic.</strong> Extended BM25 page ranking with <span className="impact-text">BERT-based semantic detection and reranking</span>. This increased relevant-page coverage and improved the evidence presented to downstream extraction.</li>
               <li><strong>Prompts became methodology aware.</strong> Applied few-shot patterns and structured instructions, then designed a prompt-builder agent that interpreted methodology documents and assembled task-specific extraction prompts.</li>
               <li><strong>Extraction became controlled.</strong> Added preprocessing, schema-aware post-processing, data cleansing, validation, evidence checks and explicit hallucination controls before outputs could move forward.</li>
-              <li><strong>Quality became measurable.</strong> Built a <span className="impact-text">ground-truth assessment pipeline</span> that calculated precision and recall at the data-point level, compared prompt and model variants, exposed failure modes and supported regression testing.</li>
+              <li><strong>Quality became measurable.</strong> Built a <span className="impact-text">ground-truth assessment pipeline</span> that calculated precision and recall at the data-point level, compared prompt and model variants, and converted production failure modes into regression tests for the next system iteration.</li>
               <li><strong>Dataset performance improved materially.</strong> Single-handedly advanced multiple extraction datasets from below 50% precision and recall to <span className="impact-text">&gt;90% recall and &gt;80% precision</span> through an architectural shift from a prompting-based LLM system to an <span className="impact-text">agentic workflow</span>.</li>
-              <li><strong>The workflow became agentic.</strong> Re-architected extraction with CrewAI agents for prompt building, document extraction, cleansing and validation. Agents used defined tools and skills instead of relying on one oversized prompt.</li>
+              <li><strong>The workflow became agentic and reusable.</strong> Re-architected extraction with CrewAI agents for prompt building, document extraction, cleansing and validation. Codified agent tools, skills and prompt patterns as modular building blocks that could be applied across datasets.</li>
               <li><strong>Orchestration became task aware.</strong> Designed <span className="impact-text">sequential and hierarchical flows</span>, agent-to-agent communication, context services and memory patterns that preserved methodology, evidence and intermediate decisions.</li>
               <li><strong>Delivery became conversational.</strong> Extended the system into an <span className="impact-text">AG-UI experience</span> where users could upload documents, explain the requested data and guide extraction while the same evaluation and human-review controls remained in place.</li>
               <li><strong>Evaluation moved beyond the model.</strong> Deployed workflows on <span className="impact-text">GCP and Vertex AI</span>, then assessed grounding, tool execution, handoffs and end-to-end completion across the full agent system.</li>
             </ul>
           </details>
+
+          <section className="cross-functional-panel" aria-labelledby="cross-functional-title">
+            <div className="cross-functional-heading">
+              <p className="experience-kicker">Cross-functional delivery</p>
+              <h4 id="cross-functional-title">Worked as the technical bridge from domain problem to production system.</h4>
+              <p>
+                Embedded across methodology, data, product, research, platform and
+                engineering teams to solve the complete problem, not just the model layer.
+              </p>
+            </div>
+            <ul>
+              <li><strong>Translated domain intent into engineering scope.</strong> Partnered with methodology experts, data owners and product stakeholders to turn complex extraction definitions into schemas, acceptance criteria, evaluation datasets and executable delivery plans.</li>
+              <li><strong>Built inside the operating environment.</strong> Worked directly with existing document pipelines, proprietary datasets and GCP and Vertex AI services, adapting retrieval, agent orchestration and validation to enterprise constraints instead of treating the work as an isolated prototype.</li>
+              <li><strong>Aligned specialists around shared outcomes.</strong> Connected data, ML, platform and product contributors around precision, recall, grounding and workflow-adoption goals, clarified dependencies and resolved blockers across the extraction lifecycle.</li>
+              <li><strong>Made system behavior legible.</strong> Used evaluation results, traceable evidence and failure analysis to explain model tradeoffs to technical and domain stakeholders and guide decisions about readiness, risk and human review.</li>
+              <li><strong>Returned field learning to the platform.</strong> Converted dataset-specific issues and stakeholder feedback into reusable agent tools, prompt patterns, context services and evaluation components that strengthened subsequent deployments.</li>
+            </ul>
+          </section>
         </article>
       </section>
 

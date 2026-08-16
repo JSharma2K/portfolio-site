@@ -829,6 +829,66 @@ h1 em,
   top: 1px;
 }
 
+.cross-functional-panel {
+  border-bottom: 1px solid rgba(7, 10, 16, .24);
+  border-top: 1px solid rgba(7, 10, 16, .24);
+  display: grid;
+  gap: clamp(42px, 6vw, 88px);
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(280px, .7fr) minmax(0, 1.3fr);
+  margin-top: 48px;
+  padding: clamp(44px, 5vw, 72px) 0;
+}
+
+.cross-functional-heading h4 {
+  font-size: clamp(30px, 3.4vw, 52px);
+  font-weight: 550;
+  letter-spacing: -.045em;
+  line-height: 1.08;
+  margin: 14px 0 22px;
+}
+
+.cross-functional-heading > p:last-child {
+  color: rgba(7, 10, 16, .72);
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 0;
+  max-width: 520px;
+}
+
+.cross-functional-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cross-functional-panel li {
+  border-top: 1px solid rgba(7, 10, 16, .17);
+  color: rgba(7, 10, 16, .79);
+  font-size: 15px;
+  line-height: 1.7;
+  padding: 20px 0 20px 34px;
+  position: relative;
+}
+
+.cross-functional-panel li:last-child {
+  border-bottom: 1px solid rgba(7, 10, 16, .17);
+}
+
+.cross-functional-panel li::before {
+  color: var(--blue);
+  content: "—";
+  font-size: 18px;
+  font-weight: 800;
+  left: 0;
+  position: absolute;
+  top: 20px;
+}
+
+.cross-functional-panel li strong {
+  color: var(--ink);
+}
+
 .ownership-panel {
   border-top: 1px solid rgba(9, 39, 50, .28);
   padding-top: 30px;
@@ -1525,6 +1585,8 @@ footer {
   .here-experience .company-heading { width: 100%; }
   .msci-ownership summary { min-height: 84px; padding: 24px 48px; }
   .msci-ownership li { padding-left: 28px; }
+  .cross-functional-panel { gap: 32px; grid-template-columns: 1fr; margin-top: 36px; padding: 44px 0; }
+  .cross-functional-panel li { font-size: 14.5px; padding-left: 28px; }
   .ownership-details li,
   .ownership-panel li { font-size: 14.5px; }
   .journey-grid,
