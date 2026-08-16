@@ -541,7 +541,7 @@ h1 em,
 .experience-section {
   background: var(--paper);
   color: var(--ink);
-  padding-bottom: clamp(48px, 5vw, 76px);
+  padding-bottom: clamp(72px, 7vw, 112px);
 }
 
 .experience-section .section-number,
@@ -1589,7 +1589,7 @@ footer {
   .here-experience .company-heading { width: 100%; }
   .msci-ownership summary { min-height: 84px; padding: 24px 48px; }
   .msci-ownership li { padding-left: 28px; }
-  .experience-section { padding-bottom: 44px; }
+  .experience-section { padding-bottom: 60px; }
   .cross-functional-panel { gap: 32px; grid-template-columns: 1fr; margin-top: 36px; padding: 44px 0 20px; }
   .cross-functional-panel li { font-size: 14.5px; padding-left: 28px; }
   .ownership-details li,
