@@ -40,6 +40,12 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: /portfolio-site
           NEXT_PUBLIC_SITE_URL: https://jsharma2k.github.io
 
+      - name: Normalize GitHub Pages asset paths
+        run: |
+          mv dist/client/portfolio-site/_next dist/client/_next
+          rmdir dist/client/portfolio-site
+          test -f dist/client/.nojekyll
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
