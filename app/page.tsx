@@ -155,21 +155,6 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
-const terminalBinary =
-  "01001010 01001001 01010110 01001001 01010100 01000101 01010011 01001000 00100000 01000001 01001001 00100000 01010011 01011001 01010011 01010100 01000101 01001101 01010011 00100000 01010010 01000101 01000001 01000100 01011001 00100000";
-
-function TerminalDivider() {
-  return (
-    <div className="terminal-divider" aria-hidden="true">
-      <div className="terminal-divider-track">
-        {[0, 1].map((copy) => (
-          <span key={copy}>{terminalBinary}</span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 function CompanyLogo({
   company,
   variant = "default",
@@ -337,8 +322,6 @@ export default function Home() {
         </article>
       </section>
 
-      <TerminalDivider />
-
       <section className="section here-zone" aria-label="HERE Technologies experience">
         <article className="experience-card here-experience">
           <div className="experience-meta">
@@ -399,8 +382,6 @@ export default function Home() {
         </div>
       </section>
 
-      <TerminalDivider />
-
       <section className="section capability-section">
         <div className="section-heading">
           <p className="section-number">02 / Product delivery</p>
@@ -418,8 +399,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <TerminalDivider />
 
       <section className="section systems-section" id="systems">
         <div className="section-heading split-heading">
@@ -451,8 +430,6 @@ export default function Home() {
         </div>
       </section>
 
-      <TerminalDivider />
-
       <section className="section projects-section" id="projects">
         <div className="section-heading split-heading">
           <p className="section-number">04 / Selected projects</p>
@@ -471,8 +448,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <TerminalDivider />
 
       <section className="contact-section" id="contact">
         <p className="section-number">05 / Contact</p>
