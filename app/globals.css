@@ -513,45 +513,6 @@ h1 em,
   padding: clamp(88px, 10vw, 150px) clamp(24px, 6vw, 92px);
 }
 
-.dot-transition {
-  --transition-dot-rgb: 243, 241, 233;
-  position: relative;
-}
-
-.dot-transition::before {
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 34%, #000 66%, transparent);
-  background-image: radial-gradient(
-    circle,
-    rgba(var(--transition-dot-rgb), .38) 0 .7px,
-    transparent .95px
-  );
-  background-position: center;
-  background-size: 15px 15px;
-  content: "";
-  height: 48px;
-  inset: -24px 0 auto;
-  mask-image: linear-gradient(to bottom, transparent, #000 34%, #000 66%, transparent);
-  pointer-events: none;
-  position: absolute;
-  z-index: 2;
-}
-
-.dots-here {
-  --transition-dot-rgb: 72, 218, 208;
-}
-
-.dots-lime {
-  --transition-dot-rgb: 184, 255, 90;
-}
-
-.dots-paper {
-  --transition-dot-rgb: 243, 241, 233;
-}
-
-.dots-blue {
-  --transition-dot-rgb: 47, 107, 255;
-}
-
 .section-heading {
   align-items: start;
   display: grid;
@@ -1607,11 +1568,6 @@ footer {
   .career-flow-copy strong { font-size: 13.5px; }
   .career-flow-inspector { min-height: 0; padding: 18px 16px 20px; }
   .section { padding: 72px 20px; }
-  .dot-transition::before {
-    background-size: 13px 13px;
-    height: 36px;
-    inset: -18px 0 auto;
-  }
   .section-heading,
   .experience-card,
   .earlier-roles article { grid-template-columns: 1fr; }
