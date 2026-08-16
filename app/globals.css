@@ -513,6 +513,48 @@ h1 em,
   padding: clamp(88px, 10vw, 150px) clamp(24px, 6vw, 92px);
 }
 
+.section-divider {
+  --divider-accent: var(--blue);
+  --divider-line: rgba(255, 255, 255, .16);
+  position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  height: 1px;
+  left: clamp(24px, 6vw, 92px);
+  position: absolute;
+  top: 28px;
+}
+
+.section-divider::before {
+  background: var(--divider-line);
+  right: clamp(24px, 6vw, 92px);
+}
+
+.section-divider::after {
+  background: var(--divider-accent);
+  width: clamp(68px, 6vw, 104px);
+}
+
+.divider-here {
+  --divider-accent: var(--here-mint);
+  --divider-line: rgba(255, 255, 255, .15);
+}
+
+.divider-capability,
+.divider-systems,
+.divider-contact {
+  --divider-accent: var(--lime);
+  --divider-line: rgba(255, 255, 255, .14);
+}
+
+.divider-projects {
+  --divider-accent: var(--blue);
+  --divider-line: rgba(7, 10, 16, .16);
+}
+
 .section-heading {
   align-items: start;
   display: grid;
@@ -1568,6 +1610,13 @@ footer {
   .career-flow-copy strong { font-size: 13.5px; }
   .career-flow-inspector { min-height: 0; padding: 18px 16px 20px; }
   .section { padding: 72px 20px; }
+  .section-divider::before,
+  .section-divider::after {
+    left: 20px;
+    top: 20px;
+  }
+  .section-divider::before { right: 20px; }
+  .section-divider::after { width: 56px; }
   .section-heading,
   .experience-card,
   .earlier-roles article { grid-template-columns: 1fr; }

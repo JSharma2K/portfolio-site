@@ -322,7 +322,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section className="section here-zone" aria-label="HERE Technologies experience">
+      <section className="section section-divider divider-here here-zone" aria-label="HERE Technologies experience">
         <article className="experience-card here-experience">
           <div className="experience-meta">
             <div className="company-heading">
@@ -382,7 +382,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section capability-section">
+      <section className="section section-divider divider-capability capability-section">
         <div className="section-heading">
           <p className="section-number">02 / Product delivery</p>
           <h2>Technical depth that comes together in working production systems.</h2>
@@ -400,7 +400,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section systems-section" id="systems">
+      <section className="section section-divider divider-systems systems-section" id="systems">
         <div className="section-heading split-heading">
           <p className="section-number">03 / Systems and data science journey</p>
           <h2>Architectures expanded. System thinking stayed consistent.</h2>
@@ -430,7 +430,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section projects-section" id="projects">
+      <section className="section section-divider divider-projects projects-section" id="projects">
         <div className="section-heading split-heading">
           <p className="section-number">04 / Selected projects</p>
           <h2>Earlier foundations that still inform the work.</h2>
@@ -449,7 +449,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-section" id="contact">
+      <section className="contact-section section-divider divider-contact" id="contact">
         <p className="section-number">05 / Contact</p>
         <h2>Ready to build AI systems that <em>work reliably</em> in your business?</h2>
         <div className="contact-row">
