@@ -541,6 +541,7 @@ h1 em,
 .experience-section {
   background: var(--paper);
   color: var(--ink);
+  padding-bottom: clamp(48px, 5vw, 76px);
 }
 
 .experience-section .section-number,
@@ -563,6 +564,10 @@ h1 em,
 
 .featured-experience {
   border-top: 2px solid var(--ink);
+}
+
+.msci-experience {
+  padding-bottom: 0;
 }
 
 .company-heading {
@@ -835,7 +840,7 @@ h1 em,
   grid-column: 1 / -1;
   grid-template-columns: minmax(280px, .7fr) minmax(0, 1.3fr);
   margin-top: 48px;
-  padding: clamp(44px, 5vw, 72px) 0;
+  padding: clamp(44px, 5vw, 72px) 0 clamp(24px, 2.8vw, 42px);
 }
 
 .cross-functional-heading h4 {
@@ -1570,6 +1575,7 @@ footer {
   .section-heading h2 { font-size: clamp(38px, 11.5vw, 48px); line-height: 1.03; }
   .section-heading > p:last-child { grid-column: auto; padding-top: 0; }
   .experience-card { gap: 28px; padding: 40px 0 60px; }
+  .msci-experience { padding-bottom: 0; }
   .experience-meta { display: grid; grid-template-columns: 1fr; }
   .company-heading { grid-column: auto; }
   .experience-role-line { grid-column: auto; white-space: normal; }
@@ -1583,7 +1589,8 @@ footer {
   .here-experience .company-heading { width: 100%; }
   .msci-ownership summary { min-height: 84px; padding: 24px 48px; }
   .msci-ownership li { padding-left: 28px; }
-  .cross-functional-panel { gap: 32px; grid-template-columns: 1fr; margin-top: 36px; padding: 44px 0; }
+  .experience-section { padding-bottom: 44px; }
+  .cross-functional-panel { gap: 32px; grid-template-columns: 1fr; margin-top: 36px; padding: 44px 0 20px; }
   .cross-functional-panel li { font-size: 14.5px; padding-left: 28px; }
   .ownership-details li,
   .ownership-panel li { font-size: 14.5px; }
