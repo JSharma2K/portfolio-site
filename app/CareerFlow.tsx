@@ -14,6 +14,8 @@ import {
 import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 type JourneyData = {
   date: string;
   title: string;
@@ -93,11 +95,11 @@ const edges: Edge[] = ["foundation", "here", "msci"].map((source, index) => ({
 
 function JourneyMark({ brand }: { brand: JourneyData["brand"] }) {
   if (brand === "here") {
-    return <Image src="/here-logo-white.svg" alt="HERE Technologies" height={56} width={64} />;
+    return <Image src={`${basePath}/here-logo-white.svg`} alt="HERE Technologies" height={56} width={64} />;
   }
 
   if (brand === "msci") {
-    return <Image src="/msci-logo.svg" alt="MSCI" height={24} width={70} />;
+    return <Image src={`${basePath}/msci-logo.svg`} alt="MSCI" height={24} width={70} />;
   }
 
   return <span aria-hidden="true">{brand === "future" ? "→" : "01"}</span>;

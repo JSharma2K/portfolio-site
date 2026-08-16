@@ -1,6 +1,30 @@
 @import "tailwindcss";
 @import "@xyflow/react/dist/style.css" layer(base);
 
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 200 800;
+  src: url("./fonts/manrope-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/space-mono-regular-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/space-mono-bold-latin.woff2") format("woff2");
+}
+
 :root {
   --ink: #070a10;
   --ink-soft: #101620;
@@ -16,6 +40,8 @@
   --here-ink: #092732;
   --here-gray: #1c232e;
   --here-gray-deep: #0f1621;
+  --font-manrope: "Manrope";
+  --font-space-mono: "Space Mono";
   --font-sans: var(--font-manrope);
   --font-mono: var(--font-space-mono);
 }

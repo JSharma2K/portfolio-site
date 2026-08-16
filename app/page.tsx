@@ -1,6 +1,8 @@
 import CareerFlow from "./CareerFlow";
 import MobileMenu from "./MobileMenu";
 
+export const dynamic = "force-static";
+
 const marqueeSkills = [
   "Classical machine learning",
   "Deep learning",
@@ -155,6 +157,8 @@ function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 function CompanyLogo({
   company,
   variant = "default",
@@ -167,7 +171,7 @@ function CompanyLogo({
   return (
     <span className={`company-logo ${isMsci ? "msci-logo" : "here-logo"}`}>
       <img
-        src={isMsci ? "/msci-logo.svg" : isPressHere ? "/here-logo-white.svg" : "/here-logo-reference.svg"}
+        src={`${basePath}${isMsci ? "/msci-logo.svg" : isPressHere ? "/here-logo-white.svg" : "/here-logo-reference.svg"}`}
         alt={isMsci ? "MSCI" : "HERE Technologies"}
       />
     </span>
@@ -207,7 +211,7 @@ export default function Home() {
             <a
               className="button button-resume"
               download="Jivitesh-Sharma-Resume.pdf"
-              href="/Jivitesh-Sharma-Resume.pdf"
+              href={`${basePath}/Jivitesh-Sharma-Resume.pdf`}
             >
               Download full resume <span aria-hidden="true">↓</span>
             </a>

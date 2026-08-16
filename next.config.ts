@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
+const githubPagesBasePath = "/portfolio-site";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+export default isGitHubPages
+  ? {
+      assetPrefix: githubPagesBasePath,
+      images: { unoptimized: true },
+      output: "export" as const,
+      trailingSlash: true,
+    }
+  : {};
