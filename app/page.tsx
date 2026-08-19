@@ -197,9 +197,8 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <h1>
-            <span className="hero-title-line">I build AI</span>{" "}
-            <span className="hero-title-line">products that</span>{" "}
-            <span className="hero-title-line">turn <em>complexity</em></span>{" "}
+            <span className="hero-title-line">I build AI products</span>{" "}
+            <span className="hero-title-line">that turn <em>complexity</em></span>{" "}
             <span className="hero-title-line">into measurable</span>{" "}
             <span className="hero-title-line">business value.</span>
           </h1>
