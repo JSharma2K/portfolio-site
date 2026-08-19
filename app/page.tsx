@@ -197,7 +197,11 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy">
           <h1>
-            I build AI products that turn <em>complexity</em> into measurable business value.
+            <span className="hero-title-line">I build AI</span>{" "}
+            <span className="hero-title-line">products that</span>{" "}
+            <span className="hero-title-line">turn <em>complexity</em></span>{" "}
+            <span className="hero-title-line">into measurable</span>{" "}
+            <span className="hero-title-line">business value.</span>
           </h1>
           <p className="hero-lede">
             Data scientist and AI engineer with more than five years across NLP,

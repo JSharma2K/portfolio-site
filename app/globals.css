@@ -216,6 +216,10 @@ h1 em,
   font-style: normal;
 }
 
+.hero-title-line {
+  display: inline;
+}
+
 .hero-lede {
   color: #deded7;
   font-size: clamp(17px, 1.5vw, 22px);
@@ -1570,7 +1574,8 @@ footer {
   .hero-lede { font-size: 17px; margin-bottom: 30px; }
   .hero-actions { flex-wrap: wrap; gap: 18px 28px; }
   .button { min-height: 44px; }
-  h1 { font-size: clamp(46px, 14vw, 66px); }
+  h1 { font-size: clamp(38px, 11.3vw, 56px); }
+  .hero-title-line { display: block; white-space: nowrap; }
   .career-map { border-radius: 16px; max-width: 100%; overflow-x: hidden; }
   .career-map-header { font-size: 9px; gap: 16px; padding: 14px; }
   .career-flow { height: 440px; }
